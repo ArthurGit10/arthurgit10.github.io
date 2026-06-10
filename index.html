@@ -120,18 +120,18 @@
 <body class="font-body-md text-body-md custom-scrollbar overflow-x-hidden">
 
 <!-- TopNavBar -->
-<header class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+<nav class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50" id="navbar">
   <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
-    <div class="font-headline-md text-headline-md font-bold text-surface-container-lowest cursor-pointer transition-transform active:scale-95">
-      <a class="block" href="index.html">Arthur Mauras</a>
+    <a class="font-headline-md text-headline-md font-bold text-surface-container-lowest" href="index.html">Arthur Mauras</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="font-label-md text-label-md text-primary-fixed font-bold" href="index.html">About</a>
+      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="repository.html">Projects</a>
+      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="index.html#experience">Experience</a>
+      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="contact.html">Contact</a>
+      <a class="bg-brand-teal text-white px-6 py-2 font-label-md font-bold uppercase tracking-wider hover:opacity-90 transition-all ml-4" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank">RESUME</a>
     </div>
-    <nav class="hidden md:flex gap-8 items-center">
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors duration-200" href="index.html" class="font-label-md text-label-md text-primary-fixed font-bold transition-colors">About</a>
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors duration-200" href="repository.html">Projects</a>
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors duration-200" href="index.html#experience">Experience</a>
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors duration-200" href="contact.html">Contact</a>
-      <a class="bg-brand-teal text-white px-6 py-2 rounded-lg font-label-md hover:opacity-90 transition-all active:scale-95 ml-4" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank">RESUME</a>
-    </nav>
+  </div>
+</nav>
   </div>
 </header>
 
@@ -389,9 +389,9 @@
 </nav>
 
 <!-- FAB -->
-<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[60] bg-brand-teal text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-all active:scale-95" href="contact.html">
+<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[60] bg-brand-teal text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-all active:scale-95" href="https://calendar.app.google/fsCkjgnA5HPqw1Jz5" target="_blank">
   <span class="material-symbols-outlined">calendar_today</span>
-  <span class="font-label-md">Let's Chat</span>
+  <span class="font-label-md font-bold uppercase tracking-wider">Let's Chat</span>
 </a>
 
 <script>

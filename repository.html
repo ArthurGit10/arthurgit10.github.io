@@ -109,15 +109,15 @@
 <body class="font-body-md text-on-background selection:bg-primary-fixed-dim">
 
 <!-- TopNavBar -->
-<nav class="bg-[#1A1C1E] w-full top-0 border-t-4 border-primary sticky z-50">
-  <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<nav class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50">
+  <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
     <a class="font-headline-md text-headline-md font-bold text-surface-container-lowest" href="index.html">Arthur Mauras</a>
-    <div class="hidden md:flex items-center gap-8 ml-auto">
+    <div class="hidden md:flex items-center gap-8">
       <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="index.html">About</a>
-      <a class="font-label-md text-label-md text-primary-fixed font-bold transition-colors" href="repository.html">Projects</a>
+      <a class="font-label-md text-label-md text-primary-fixed font-bold" href="repository.html">Projects</a>
       <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="index.html#experience">Experience</a>
       <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="contact.html">Contact</a>
-      <a class="bg-brand-teal text-white px-6 py-2 font-display text-label-md font-bold uppercase tracking-wider transition-all hover:bg-opacity-90 ml-4" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank">RESUME</a>
+      <a class="bg-brand-teal text-white px-6 py-2 font-label-md font-bold uppercase tracking-wider hover:opacity-90 transition-all ml-4" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank">RESUME</a>
     </div>
   </div>
 </nav>
@@ -315,10 +315,10 @@
 </footer>
 
 <!-- FAB -->
-<button class="fixed bottom-24 md:bottom-8 right-8 z-50 bg-brand-teal text-white flex items-center gap-2 px-6 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all" onclick="window.location.href='contact.html'">
+<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[60] bg-brand-teal text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-all active:scale-95" href="https://calendar.app.google/fsCkjgnA5HPqw1Jz5" target="_blank">
   <span class="material-symbols-outlined">calendar_today</span>
-  <span class="font-display text-label-md font-bold uppercase tracking-wider">Let's Chat</span>
-</button>
+  <span class="font-label-md font-bold uppercase tracking-wider">Let's Chat</span>
+</a>
 
 <script>
   const filterButtons = document.querySelectorAll('button[class*="bg-surface-container-high"]');
