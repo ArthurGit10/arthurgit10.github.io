@@ -1,1 +1,378 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffabf1",
+                    "on-primary-fixed": "#380037",
+                    "on-primary-container": "#ffb8f2",
+                    "inverse-surface": "#2d3134",
+                    "outline-variant": "#d7c0cf",
+                    "on-error-container": "#93000a",
+                    "primary": "#770075",
+                    "secondary-container": "#d0e1f5",
+                    "surface-variant": "#e0e3e7",
+                    "surface-container-highest": "#e0e3e7",
+                    "secondary": "#506071",
+                    "primary-fixed": "#ffd7f4",
+                    "on-surface": "#181c1f",
+                    "primary-container": "#972192",
+                    "outline": "#85727f",
+                    "surface-container": "#ebeef2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#546475",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#384858",
+                    "inverse-primary": "#ffabf1",
+                    "secondary-fixed-dim": "#b7c8dc",
+                    "surface-tint": "#9f2999",
+                    "on-surface-variant": "#52424e",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#f7fafe",
+                    "tertiary-fixed-dim": "#7ed4d7",
+                    "surface-container-low": "#f1f4f8",
+                    "tertiary": "#00484a",
+                    "on-secondary-fixed": "#0c1d2b",
+                    "inverse-on-surface": "#eef1f5",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e8ec",
+                    "on-tertiary-container": "#86dcdf",
+                    "tertiary-container": "#006265",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#002021",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f7fafe",
+                    "on-tertiary-fixed-variant": "#004f51",
+                    "secondary-fixed": "#d3e4f8",
+                    "tertiary-fixed": "#9af1f4",
+                    "on-primary-fixed-variant": "#82007f",
+                    "on-background": "#181c1f",
+                    "surface-dim": "#d7dade",
+                    "background": "#f7fafe",
+                    "brand-teal": "#2B898C",
+                    "brand-steel": "#A2B3C6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "container-max": "1200px",
+                    "section-gap": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display": ["Inter"],
+                    "label-md": ["Inter"],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #ECEFF3;
+            color: #181C1F;
+        }
+        .project-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+            border: 1px solid rgba(162, 179, 198, 0.3);
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-bottom: 2px solid #2B898C;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .technical-chip {
+            background-color: #F1F4F8;
+            color: #506071;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            padding: 2px 8px;
+            border: 1px solid #D7DADE;
+        }
+        .filter-btn-active {
+            background-color: #972192;
+            color: white;
+        }
+        /* Mobile nav safe area padding */
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 72px;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed-dim">
+<!-- TopNavBar (Desktop) -->
+<nav class="bg-[#1A1C1E] w-full top-0 border-t-4 border-primary sticky z-50">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="font-display text-headline-md font-bold text-white tracking-tight" href="index.html">Arthur Mauras</a>
+<div class="hidden md:flex items-center gap-8 ml-auto">
+<a class="text-white font-medium hover:text-primary-fixed-dim transition-colors font-display text-body-md" href="index.html">About</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-display text-body-md" href="repository.html">Projects</a>
+<a class="text-white font-medium hover:text-primary-fixed-dim transition-colors font-display text-body-md" href="index.html#experience">Experience</a>
+<a class="text-white font-medium hover:text-primary-fixed-dim transition-colors font-display text-body-md" href="contact.html">Contact</a>
+<a class="bg-brand-teal text-white px-6 py-2 font-display text-label-md font-bold uppercase tracking-wider transition-all hover:bg-opacity-90 ml-4" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank">
+                RESUME
+            </a>
+</div>
+</div>
+</nav>
+<!-- Mobile Bottom Navigation -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#1A1C1E]/90 backdrop-blur-md border-t border-white/10 z-[60] flex items-center justify-around h-[64px] px-4 shadow-lg">
+  <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="index.html">
+    <span class="material-symbols-outlined !text-[24px]">home</span>
+    <span class="font-label-caps uppercase">Home</span>
+  </a>
+  <a class="flex flex-col items-center gap-1 bg-primary-container text-on-primary-container px-4 py-1 rounded-full" href="projects.html">
+    <span class="material-symbols-outlined !text-[24px]">precision_manufacturing</span>
+    <span class="font-label-caps uppercase">Projects</span>
+  </a>
+  <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="index.html#experience">
+    <span class="material-symbols-outlined !text-[24px]">work</span>
+    <span class="font-label-caps uppercase">Experience</span>
+  </a>
+  <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="contact.html">
+    <span class="material-symbols-outlined !text-[24px]">person</span>
+    <span class="font-label-caps uppercase">Me</span>
+  </a>
+</div>
+<main class="max-w-container-max mx-auto px-gutter py-12">
+<!-- Header Section -->
+<header class="mb-12 border-l-4 border-primary pl-6">
+<h1 class="font-display text-display mb-2">Project Repository</h1>
+<p class="font-body-lg text-secondary max-w-2xl">
+                Exploring the intersection of industrial precision and creative maker logic. From automated manufacturing pipelines to custom Arduino-driven prototypes.
+            </p>
+</header>
+<!-- Filter Bar -->
+<section class="bg-surface-container-lowest p-4 mb-12 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6 border border-outline-variant/20">
+<div class="flex flex-wrap gap-2">
+<button class="filter-btn-active px-4 py-2 text-label-md font-bold transition-colors">All</button>
+<button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Professional</button>
+<button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Personal</button>
+<button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Arduino</button>
+<button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Dashboards</button>
+<button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Manufacturing</button>
+</div>
+<div class="relative w-full md:w-64">
+<input class="w-full bg-white border border-brand-steel/40 px-4 py-2 pr-10 focus:ring-1 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all font-body-md" placeholder="Search projects..." type="text">
+<span class="material-symbols-outlined absolute right-3 top-2 text-secondary">search</span>
+</div>
+</section>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- START PROJECT LIST -->
+<!-- Project: SCARA Optimization -->
+<article class="project-card bg-white flex flex-col overflow-hidden">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWn0-JVc9mikJ6jd3VheV2jWOfQgaNCn46l5t29oj75smVUgQzggacKs9JX41w75YQ11sk8h_wwEcon2hBRpKe8WXFs4eoSZcNZdj5jf7Yvm7sG-WfQZvToqVGaETslk8pbwZ98cIQDEUFN_rUsruZr-XZi4s3za0xdvpkYiVMHsa_SEjzmvLFEleaHyYfqgzWqsl8aEs-FMGF9AVABSOsLQEi0Zs0RgVu64Y62GoDGP0qFnUMXel9dmXe05eictQ6Lknzyf196FRe">
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">PROFESSIONAL</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-display text-headline-md mb-2">SCARA Optimization</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Optimization of a robotic assembly line increasing throughput by 22% using kinematic simulation.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="technical-chip">MATLAB</span>
+<span class="technical-chip">AutoCAD</span>
+<span class="technical-chip">Python</span>
+</div>
+<a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
+                        VIEW PROJECT 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project: Smart Greenhouse v2 -->
+<article class="project-card bg-white flex flex-col overflow-hidden">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhWyt9OPj0HZE8GRvaXkgshbI5uNLkqmSnC9cwM_0WiU1TYUHwQtiRM-0fwnshW_4cFs_7UUpqueIeFn7iglEmNZGsaph9xKfNMhpcv_tI1d3L3G31kNJ8zN9b-LaCzs8BihQpzMlFx2OiDyuGv3-E0IzB3-jmE1i9SVWhr1OL6nqQ6XLiAaua1t4UmqqtCXFhwbZKYZFQ0eiNjNKueOF6QPk92cmDUJd9piHjdCaZh-y0RXWKKondKVFfw881jJni-XuTdrxAjMGb">
+<div class="absolute top-4 right-4 bg-brand-teal text-white text-xs font-bold px-2 py-1 tracking-widest">PERSONAL</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-display text-headline-md mb-2">Smart Greenhouse v2</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Autonomous climate control system featuring soil moisture sensors and automated irrigation logic.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="technical-chip">C++</span>
+<span class="technical-chip">Arduino</span>
+<span class="technical-chip">I2C</span>
+</div>
+<a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
+                        VIEW PROJECT 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project: Supply Chain KPI Tool -->
+<article class="project-card bg-white flex flex-col overflow-hidden">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSWAK-XJUYtaE29dWTv3ylmnmBiNSzpMG7MWWueSvWBhDINQW7Y4-4uwiXO6Ojzdz7fBnB8DU4IYi0DQHbCYj5gs3AMoUiy7hwLFjBOipBUbv71_7q4_I24zE5bi2_EWYkIz5oklL_O-tJ30Leorm_1kCaYHIaiwCJnZSzzXpY2WZSnN9BUFsQhZckmX1xS-fRaKtBOXQ-lId-PhxhkrmAoLS0PKhYRlj1fIvGdo86MJhlhnZtA_MMFK17QbRKrqkzu-msTf1ojCX6">
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">DASHBOARDS</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-display text-headline-md mb-2">Supply Chain KPI Tool</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Real-time monitoring of logistics lead times and inventory turnover rates for regional distributors.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="technical-chip">Tableau</span>
+<span class="technical-chip">SQL</span>
+<span class="technical-chip">Excel VBA</span>
+</div>
+<a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
+                        VIEW PROJECT 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project: Custom CNC Jig Design -->
+<article class="project-card bg-white flex flex-col overflow-hidden">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-QOBU2_FlflyXbCpOF82H-NMFqDPz0HojVfk5JkRguZFLBwCJIQFyRUImZHsBdMOtwmTkwbhMoqct9hsOPUPF95-HiMQODOspZuqco1nep5ICtxIBzS7-P07FRrj4YKNouKG0mtl_vQvsu6Gri61zEUOiw6ZCQMfExz01iNeSWzMXtx4T2wIXneuK4PyZa-Cw1tOk1ixI0lbM1-vpnbmZDap_lmY7SKLbvwVgDIL0zb3kjq_FEytuTqsGumYm6oJHLY38r5vwQVFY">
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">MANUFACTURING</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-display text-headline-md mb-2">Custom CNC Jig Design</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Iterative design of universal modular fixtures to reduce setup time by 45% in batch production.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="technical-chip">SolidWorks</span>
+<span class="technical-chip">GD&amp;T</span>
+<span class="technical-chip">Steel</span>
+</div>
+<a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
+                        VIEW PROJECT 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project: LoRa Mesh Network -->
+<article class="project-card bg-white flex flex-col overflow-hidden">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8HladpAgCJCU8xhlRkGdvZcqAn_AMYrdc-yzsKKqYE6nHwLH4kgJKDwRQrPVcZvvoQ5c1dSbyPz6Np_acofTkUwkupo-vI0WpaWQxtLJtKWRRuugCeSb7ZXUAfzCLdNyNt8LX6q2jmunTYjg8cwIngHYgYHE6_eAqsjxfJiyl5_bQrFDSyx0XNinb7JxjpNzi87Ks3bziBFpk3r_j4r_trcx6EqxnvhIZUzV9ECcB0GIFrlZ6sCFppThdjphE4eo39q9dYhX6w0y">
+<div class="absolute top-4 right-4 bg-brand-teal text-white text-xs font-bold px-2 py-1 tracking-widest">PERSONAL</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-display text-headline-md mb-2">LoRa Mesh Network</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Developing a low-power, long-range communication protocol for remote environmental monitoring.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="technical-chip">ESP32</span>
+<span class="technical-chip">C++</span>
+<span class="technical-chip">RadioLib</span>
+</div>
+<a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
+                        VIEW PROJECT 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project: Lean 5S Implementation -->
+<article class="project-card bg-white flex flex-col overflow-hidden">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8TaQJ4mc-fSi5OInuvRlb6WarCGoyTHHbsCBNHTwn-Wjot-SSIrwpDXYrtWbr75HNy_rqsDfVwWcSpjBXwbkybvqx5zLXb5fosiw-IrEwA-k65Xkr3hLKPvEkqyjDec26uFvfUVauSIbE-l5KQtzVkF7dvGZY44MoTXLEucDKc-nHhJMpC7FvEhL80uHdTKWlfmv8C8QshNG-yeaW77xOn0zNfNrt9HHPe8v7zSGFg0gbFab0guuBxctYv16J9Cn7XltrE3JyQLZD">
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">PROFESSIONAL</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-display text-headline-md mb-2">Lean 5S Implementation</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">Leading a facility-wide 5S overhaul that reduced workplace waste by 15% and improved safety scores.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="technical-chip">Lean Six Sigma</span>
+<span class="technical-chip">Visio</span>
+<span class="technical-chip">ERP</span>
+</div>
+<a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
+                        VIEW PROJECT 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- END PROJECT LIST -->
+</div>
+</main>
+<!-- Project Metrics Grid (Specialized Component) -->
+<section class="bg-surface-container py-16 mt-section-gap border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div>
+<div class="text-primary font-display text-display font-bold">30%</div>
+<div class="font-label-caps text-secondary mt-2">EFFICIENCY GAIN</div>
+</div>
+<div>
+<div class="text-primary font-display text-display font-bold">12k+</div>
+<div class="font-label-caps text-secondary mt-2">LINES OF CODE</div>
+</div>
+<div>
+<div class="text-primary font-display text-display font-bold">14</div>
+<div class="font-label-caps text-secondary mt-2">PROTOTYPES BUILT</div>
+</div>
+<div>
+<div class="text-primary font-display text-display font-bold">99.8%</div>
+<div class="font-label-caps text-secondary mt-2">PRECISION RATE</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant/30 bg-surface dark:bg-surface-dim pb-20 md:pb-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-10 max-w-container-max mx-auto gap-4">
+<div class="font-display text-label-md font-bold text-on-surface">Arthur Mauras</div>
+<p class="font-display text-label-md text-secondary opacity-80">© 2024 Industrial Engineering Portfolio. Built for precision.</p>
+<div class="flex gap-6">
+<a class="font-display text-label-md text-secondary hover:text-primary transition-colors" href="https://linkedin.com">LinkedIn</a>
+<a class="font-display text-label-md text-secondary hover:text-primary transition-colors" href="https://github.com">GitHub</a>
+<a class="font-display text-label-md text-secondary hover:text-primary transition-colors" href="contact.html">Email</a>
+<a class="font-display text-label-md text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 md:bottom-8 right-8 z-50 bg-brand-teal text-white flex items-center gap-2 px-6 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all group" id="floating-chat-btn" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules', '_blank')">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-display text-label-md font-bold uppercase tracking-wider">Let's Chat</span>
+</button>
+<script>
+    // Simple Interaction logic for filter buttons
+    const filterButtons = document.querySelectorAll('button[class*="bg-surface-container-high"]');
+    const activeClass = 'filter-btn-active';
+    const inactiveClass = 'bg-surface-container-high text-secondary hover:text-primary';
 
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentActive = document.querySelector('.' + activeClass);
+            if (currentActive) {
+                currentActive.className = `px-4 py-2 text-label-md font-bold transition-colors ${inactiveClass}`;
+            }
+            btn.className = `px-4 py-2 text-label-md font-bold transition-colors ${activeClass}`;
+        });
+    });
+</script>
+
+
+
+
+</body></html>
