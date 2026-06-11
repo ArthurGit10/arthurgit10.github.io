@@ -1,334 +1,448 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html class="scroll-smooth font-sans" lang="en">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Projects | Arthur Mauras - Industrial Engineering</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "primary-fixed-dim": "#ffabf1",
-          "on-primary-fixed": "#380037",
-          "on-primary-container": "#ffb8f2",
-          "inverse-surface": "#2d3134",
-          "outline-variant": "#d7c0cf",
-          "on-error-container": "#93000a",
-          "primary": "#770075",
-          "secondary-container": "#d0e1f5",
-          "surface-variant": "#e0e3e7",
-          "surface-container-highest": "#e0e3e7",
-          "secondary": "#506071",
-          "primary-fixed": "#ffd7f4",
-          "on-surface": "#181c1f",
-          "primary-container": "#972192",
-          "outline": "#85727f",
-          "surface-container": "#ebeef2",
-          "surface-container-lowest": "#ffffff",
-          "on-secondary-container": "#546475",
-          "error": "#ba1a1a",
-          "on-secondary-fixed-variant": "#384858",
-          "inverse-primary": "#ffabf1",
-          "secondary-fixed-dim": "#b7c8dc",
-          "surface-tint": "#9f2999",
-          "on-surface-variant": "#52424e",
-          "on-tertiary": "#ffffff",
-          "error-container": "#ffdad6",
-          "surface": "#f7fafe",
-          "tertiary-fixed-dim": "#7ed4d7",
-          "surface-container-low": "#f1f4f8",
-          "tertiary": "#00484a",
-          "on-secondary-fixed": "#0c1d2b",
-          "inverse-on-surface": "#eef1f5",
-          "on-primary": "#ffffff",
-          "surface-container-high": "#e5e8ec",
-          "on-tertiary-container": "#86dcdf",
-          "tertiary-container": "#006265",
-          "on-error": "#ffffff",
-          "on-tertiary-fixed": "#002021",
-          "on-secondary": "#ffffff",
-          "surface-bright": "#f7fafe",
-          "on-tertiary-fixed-variant": "#004f51",
-          "secondary-fixed": "#d3e4f8",
-          "tertiary-fixed": "#9af1f4",
-          "on-primary-fixed-variant": "#82007f",
-          "on-background": "#181c1f",
-          "surface-dim": "#d7dade",
-          "background": "#f7fafe",
-          "brand-teal": "#2B898C",
-          "brand-steel": "#A2B3C6"
-        },
-        "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-        "spacing": { "base": "8px", "margin-mobile": "16px", "container-max": "1200px", "section-gap": "80px", "gutter": "24px" },
-        "fontFamily": {
-          "display": ["Inter"], "label-md": ["Inter"], "label-caps": ["JetBrains Mono"],
-          "headline-lg": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"]
-        },
-        "fontSize": {
-          "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-          "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
-          "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
-          "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <!-- Technical SEO & Metadata -->
+  <title>Projects Repository | Arthur Mauras - Industrial Engineering Portfolio</title>
+  <meta name="description" content="Technical archive and project repository of Arthur Mauras, Industrial Engineer. Discover automated assembly optimization, smart sensor nodes, and data dashboards.">
+  <meta name="keywords" content="SCARA robot optimization, Iot climate sensors, supply chain KPI tableau dashboard, universal CNC jig design, LoRaWAN mesh communication protocols">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arthurgit10.github.io/repository.html">
+  <meta property="og:title" content="Projects Repository | Arthur Mauras - Industrial Engineering">
+  <meta property="og:description" content="Explore advanced technical prototypes, operational dashboard layouts, and custom Arduino microcontrollers designed for process pipelines.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Twitter Cards -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://arthurgit10.github.io/repository.html">
+  <meta property="twitter:title" content="Projects Repository | Arthur Mauras - Industrial Engineering">
+  <meta property="twitter:description" content="Explore advanced technical prototypes, operational dashboard layouts, and custom Arduino microcontrollers designed for process pipelines.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Preconnected Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#ffabf1",
+            "on-primary-fixed": "#380037",
+            "on-primary-container": "#ffb8f2",
+            "inverse-surface": "#2d3134",
+            "outline-variant": "#d7c0cf",
+            "on-error-container": "#93000a",
+            "primary": "#770075",
+            "secondary-container": "#d0e1f5",
+            "surface-variant": "#e0e3e7",
+            "surface-container-highest": "#e0e3e7",
+            "secondary": "#506071",
+            "primary-fixed": "#ffd7f4",
+            "on-surface": "#181c1f",
+            "primary-container": "#972192",
+            "outline": "#85727f",
+            "surface-container": "#ebeef2",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#546475",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#384858",
+            "inverse-primary": "#ffabf1",
+            "secondary-fixed-dim": "#b7c8dc",
+            "surface-tint": "#9f2999",
+            "on-surface-variant": "#52424e",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface": "#f7fafe",
+            "tertiary-fixed-dim": "#7ed4d7",
+            "surface-container-low": "#f1f4f8",
+            "tertiary": "#00484a",
+            "on-secondary-fixed": "#0c1d2b",
+            "inverse-on-surface": "#eef1f5",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e5e8ec",
+            "on-tertiary-container": "#86dcdf",
+            "tertiary-container": "#006265",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#002021",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#f7fafe",
+            "on-tertiary-fixed-variant": "#004f51",
+            "secondary-fixed": "#d3e4f8",
+            "tertiary-fixed": "#9af1f4",
+            "on-primary-fixed-variant": "#82007f",
+            "on-background": "#181c1f",
+            "surface-dim": "#d7dade",
+            "background": "#f7fafe",
+            "brand-teal": "#2B898C",
+            "brand-steel": "#A2B3C6"
+          },
+          "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+          "spacing": { "base": "8px", "margin-mobile": "16px", "container-max": "1200px", "section-gap": "80px", "gutter": "24px" },
+          "fontFamily": {
+            "sans": ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            "mono": ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+            "display": ["Inter"], "label-md": ["Inter"], "label-caps": ["JetBrains Mono"],
+            "headline-lg": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"]
+          },
+          "fontSize": {
+            "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}
+          }
         }
       }
     }
-  }
-</script>
-<style>
-  body { background-color: #ECEFF3; color: #181C1F; }
-  .project-card {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-    border: 1px solid rgba(162, 179, 198, 0.3);
-  }
-  .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border-bottom: 2px solid #2B898C;
-  }
-  .project-card:hover img { transform: scale(1.05); }
-  .technical-chip {
-    background-color: #F1F4F8;
-    color: #506071;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    padding: 2px 8px;
-    border: 1px solid #D7DADE;
-  }
-  .filter-btn-active { background-color: #972192; color: white; }
-  @media (max-width: 767px) { body { padding-bottom: 72px; } }
-</style>
-</head>
-<body class="font-body-md text-on-background selection:bg-primary-fixed-dim">
+  </script>
+  <style>
+    body { background-color: #ECEFF3; color: #181C1F; }
+    .project-card {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+      border: 1px solid rgba(162, 179, 198, 0.3);
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-bottom: 2px solid #2B898C;
+    }
+    .project-card:hover img { transform: scale(1.05); }
+    .technical-chip {
+      background-color: #F1F4F8;
+      color: #506071;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 2px 8px;
+      border: 1px solid #D7DADE;
+    }
+    .filter-btn-active { background-color: #770075; color: white; }
+    @media (max-width: 767px) { body { padding-bottom: 72px; } }
+  </style>
+<script src="/_aistudio-iframe.js"></script></head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed-dim antialiased">
 
-<!-- TopNavBar -->
-<nav class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50">
-  <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
-    <a class="font-headline-md text-headline-md font-bold text-surface-container-lowest" href="index.html">Arthur Mauras</a>
-    <div class="hidden md:flex items-center gap-8">
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="index.html">About</a>
-      <a class="font-label-md text-label-md text-primary-fixed font-bold" href="repository.html">Projects</a>
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="index.html#experience">Experience</a>
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="contact.html">Contact</a>
-      <a class="bg-brand-teal text-white px-6 py-2 font-label-md font-bold uppercase tracking-wider hover:opacity-90 transition-all ml-4" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank">RESUME</a>
-    </div>
-  </div>
-</nav>
+  <!-- Skiplink for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded focus:z-[100] focus:outline-none">
+    Skip to Main Content
+  </a>
 
-<!-- Mobile Bottom Navigation -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#1A1C1E]/90 backdrop-blur-md border-t border-white/10 z-[60] flex items-center justify-around h-[64px] px-4 shadow-lg">
-  <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="index.html">
-    <span class="material-symbols-outlined !text-[24px]">home</span>
-    <span class="font-label-caps uppercase" style="font-size:10px">Home</span>
-  </a>
-  <a class="flex flex-col items-center gap-1 bg-primary-container text-on-primary-container px-4 py-1 rounded-full" href="repository.html">
-    <span class="material-symbols-outlined !text-[24px]">precision_manufacturing</span>
-    <span class="font-label-caps uppercase" style="font-size:10px">Projects</span>
-  </a>
-  <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="index.html#experience">
-    <span class="material-symbols-outlined !text-[24px]">work</span>
-    <span class="font-label-caps uppercase" style="font-size:10px">Experience</span>
-  </a>
-  <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="contact.html">
-    <span class="material-symbols-outlined !text-[24px]">person</span>
-    <span class="font-label-caps uppercase" style="font-size:10px">Me</span>
-  </a>
-</div>
-
-<main class="max-w-container-max mx-auto px-gutter pt-32 pb-12">
-  <header class="mb-12 border-l-4 border-primary pl-6">
-    <h1 class="font-display text-display mb-2">Project Repository</h1>
-    <p class="font-body-lg text-secondary max-w-2xl">
-      Exploring the intersection of industrial precision and creative maker logic. From automated manufacturing pipelines to custom Arduino-driven prototypes.
-    </p>
+  <!-- TopNavBar Header sémantique fixe -->
+  <header class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50">
+    <nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16" aria-label="Main Navigation">
+      <a class="font-headline-md text-headline-md font-bold text-surface-container-lowest focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="index.html">Arthur Mauras</a>
+      
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="index.html">About</a>
+        <a class="font-label-md text-label-md text-primary-fixed font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="repository.html" aria-current="page">Projects</a>
+        <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="index.html#experience">Experience</a>
+        <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="contact.html">Contact</a>
+        <a class="bg-brand-teal text-white px-6 py-2 font-label-md font-bold uppercase tracking-wider hover:opacity-90 transition-all ml-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Filter Bar -->
-  <section class="bg-surface-container-lowest p-4 mb-12 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6 border border-outline-variant/20">
-    <div class="flex flex-wrap gap-2">
-      <button class="filter-btn-active px-4 py-2 text-label-md font-bold transition-colors">All</button>
-      <button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Professional</button>
-      <button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Personal</button>
-      <button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Arduino</button>
-      <button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Dashboards</button>
-      <button class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors">Manufacturing</button>
+  <!-- Main Sémantique -->
+  <main class="max-w-container-max mx-auto px-gutter pt-32 pb-12" id="main-content">
+    
+    <header class="mb-12 border-l-4 border-primary pl-6">
+      <h1 class="font-display text-display mb-2">Project Repository</h1>
+      <p class="font-body-lg text-secondary max-w-2xl">
+        Exploring the intersection of industrial precision and creative maker logic. From automated manufacturing pipelines to custom Arduino-driven prototypes.
+      </p>
+    </header>
+
+    <!-- Filter Bar & Live Search (Equipped with interactive filtering scripts) -->
+    <section class="bg-surface-container-lowest p-4 mb-12 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6 border border-outline-variant/20" aria-label="Project filtering controls">
+      <div class="flex flex-wrap gap-2" id="filter-container">
+        <button data-filter="All" class="filter-btn-active px-4 py-2 text-label-md font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary cursor-pointer">All</button>
+        <button data-filter="Professional" class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary cursor-pointer">Professional</button>
+        <button data-filter="Personal" class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary cursor-pointer">Personal</button>
+        <button data-filter="Arduino" class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary cursor-pointer">Arduino</button>
+        <button data-filter="Dashboards" class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary cursor-pointer">Dashboards</button>
+        <button data-filter="Manufacturing" class="bg-surface-container-high text-secondary hover:text-primary px-4 py-2 text-label-md font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary cursor-pointer">Manufacturing</button>
+      </div>
+      
+      <!-- Live Search Panel -->
+      <div class="relative w-full md:w-64">
+        <label for="project-search" class="sr-only">Search projects</label>
+        <input id="project-search" class="w-full bg-white border border-brand-steel/40 px-4 py-2 pr-10 focus:ring-1 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all font-body-md" placeholder="Search projects..." type="text">
+        <span class="material-symbols-outlined absolute right-3 top-2 text-secondary" aria-hidden="true">search</span>
+      </div>
+    </section>
+
+    <!-- Project Grid (Tagged for live search and filtering) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+      
+      <!-- Project 1 -->
+      <article data-category="Professional" data-tags="MATLAB, AutoCAD, Python" class="project-card bg-white flex flex-col overflow-hidden">
+        <div class="relative h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWn0-JVc9mikJ6jd3VheV2jWOfQgaNCn46l5t29oj75smVUgQzggacKs9JX41w75YQ11sk8h_wwEcon2hBRpKe8WXFs4eoSZcNZdj5jf7Yvm7sG-WfQZvToqVGaETslk8pbwZ98cIQDEUFN_rUsruZr-XZi4s3za0xdvpkYiVMHsa_SEjzmvLFEleaHyYfqgzWqsl8aEs-FMGF9AVABSOsLQEi0Zs0RgVu64Y62GoDGP0qFnUMXel9dmXe05eictQ6Lknzyf196FRe" alt="Kinematic CAD simulation model of a high capacity SCARA robotic automation arm">
+          <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest uppercase">PROFESSIONAL</div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-display text-headline-md mb-2 font-bold">SCARA Optimization</h2>
+          <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Optimization of a robotic assembly line increasing throughput by 22% using kinematic simulation.</p>
+          <div class="flex flex-wrap gap-2 mb-6" aria-label="Project technologies">
+            <span class="technical-chip">MATLAB</span>
+            <span class="technical-chip">AutoCAD</span>
+            <span class="technical-chip">Python</span>
+          </div>
+          <button class="inline-flex items-center text-brand-teal font-bold text-label-md group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal text-left bg-transparent border-none cursor-pointer">
+            VIEW DETAILS <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article data-category="Personal Arduino" data-tags="C++, Arduino, I2C" class="project-card bg-white flex flex-col overflow-hidden">
+        <div class="relative h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhWyt9OPj0HZE8GRvaXkgshbI5uNLkqmSnC9cwM_0WiU1TYUHwQtiRM-0fwnshW_4cFs_7UUpqueIeFn7iglEmNZGsaph9xKfNMhpcv_tI1d3L3G31kNJ8zN9b-LaCzs8BihQpzMlFx2OiDyuGv3-E0IzB3-jmE1i9SVWhr1OL6nqQ6XLiAaua1t4UmqqtCXFhwbZKYZFQ0eiNjNKueOF6QPk92cmDUJd9piHjdCaZh-y0RXWKKondKVFfw881jJni-XuTdrxAjMGb" alt="Close-up of smart greenhouse automated climate system circuit sensors wired into an Arduino node">
+          <div class="absolute top-4 right-4 bg-brand-teal text-white text-xs font-bold px-2 py-1 tracking-widest uppercase">PERSONAL</div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-display text-headline-md mb-2 font-bold">Smart Greenhouse v2</h2>
+          <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Autonomous climate control system featuring soil moisture sensors and automated irrigation logic.</p>
+          <div class="flex flex-wrap gap-2 mb-6" aria-label="Project technologies">
+            <span class="technical-chip">C++</span>
+            <span class="technical-chip">Arduino</span>
+            <span class="technical-chip">I2C</span>
+          </div>
+          <button class="inline-flex items-center text-brand-teal font-bold text-label-md group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal text-left bg-transparent border-none cursor-pointer">
+            VIEW DETAILS <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article data-category="Dashboards" data-tags="Tableau, SQL, Excel VBA" class="project-card bg-white flex flex-col overflow-hidden">
+        <div class="relative h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSWAK-XJUYtaE29dWTv3ylmnmBiNSzpMG7MWWueSvWBhDINQW7Y4-4uwiXO6Ojzdz7fBnB8DU4IYi0DQHbCYj5gs3AMoUiy7hwLFjBOipBUbv71_7q4_I24zE5bi2_EWYkIz5oklL_O-tJ30Leorm_1kCaYHIaiwCJnZSzzXpY2WZSnN9BUFsQhZckmX1xS-fRaKtBOXQ-lId-PhxhkrmAoLS0PKhYRlj1fIvGdo86MJhlhnZtA_MMFK17QbRKrqkzu-msTf1ojCX6" alt="Supply chain management metrics visualized neatly on a large high fidelity Tableau tablet dashboard">
+          <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest uppercase">DASHBOARDS</div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-display text-headline-md mb-2 font-bold">Supply Chain KPI Tool</h2>
+          <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Real-time monitoring of logistics lead times and inventory turnover rates for regional distributors.</p>
+          <div class="flex flex-wrap gap-2 mb-6" aria-label="Project technologies">
+            <span class="technical-chip">Tableau</span>
+            <span class="technical-chip">SQL</span>
+            <span class="technical-chip">Excel VBA</span>
+          </div>
+          <button class="inline-flex items-center text-brand-teal font-bold text-label-md group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal text-left bg-transparent border-none cursor-pointer">
+            VIEW DETAILS <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article data-category="Manufacturing" data-tags="SolidWorks, GD&T, Steel" class="project-card bg-white flex flex-col overflow-hidden">
+        <div class="relative h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-QOBU2_FlflyXbCpOF82H-NMFqDPz0HojVfk5JkRguZFLBwCJIQFyRUImZHsBdMOtwmTkwbhMoqct9hsOPUPF95-HiMQODOspZuqco1nep5ICtxIBzS7-P07FRrj4YKNouKG0mtl_vQvsu6Gri61zEUOiw6ZCQMfExz01iNeSWzMXtx4T2wIXneuK4PyZa-Cw1tOk1ixI0lbM1-vpnbmZDap_lmY7SKLbvwVgDIL0zb3kjq_FEytuTqsGumYm6oJHLY38r5vwQVFY" alt="Detailed mechanical Universal modular steel fixture clamped assembly schematic in high resolution">
+          <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest uppercase">MANUFACTURING</div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-display text-headline-md mb-2 font-bold">Custom CNC Jig Design</h2>
+          <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Iterative design of universal modular fixtures to reduce setup time by 45% in batch production.</p>
+          <div class="flex flex-wrap gap-2 mb-6" aria-label="Project technologies">
+            <span class="technical-chip">SolidWorks</span>
+            <span class="technical-chip">GD&T</span>
+            <span class="technical-chip">Steel</span>
+          </div>
+          <button class="inline-flex items-center text-brand-teal font-bold text-label-md group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal text-left bg-transparent border-none cursor-pointer">
+            VIEW DETAILS <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article data-category="Personal Arduino" data-tags="ESP32, C++, RadioLib" class="project-card bg-white flex flex-col overflow-hidden">
+        <div class="relative h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8HladpAgCJCU8xhlRkGdvZcqAn_AMYrdc-yzsKKqYE6nHwLH4kgJKDwRQrPVcZvvoQ5c1dSbyPz6Np_acofTkUwkupo-vI0WpaWQxtLJtKWRRuugCeSb7ZXUAfzCLdNyNt8LX6q2jmunTYjg8cwIngHYgYHE6_eAqsjxfJiyl5_bQrFDSyx0XNinb7JxjpNzi87Ks3bziBFpk3r_j4r_trcb6EqxnvhIZUzV9ECcB0GIFrlZ6sCFppThdjphE4eo39q9dYhX6w0y" alt="LoRaWAN nodes connected in mesh network topology on electrical table workstation with instruments">
+          <div class="absolute top-4 right-4 bg-brand-teal text-white text-xs font-bold px-2 py-1 tracking-widest uppercase">PERSONAL</div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-display text-headline-md mb-2 font-bold">LoRa Mesh Network</h2>
+          <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Developing a low-power, long-range communication protocol for remote environmental monitoring.</p>
+          <div class="flex flex-wrap gap-2 mb-6" aria-label="Project technologies">
+            <span class="technical-chip">ESP32</span>
+            <span class="technical-chip">C++</span>
+            <span class="technical-chip">RadioLib</span>
+          </div>
+          <button class="inline-flex items-center text-brand-teal font-bold text-label-md group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal text-left bg-transparent border-none cursor-pointer">
+            VIEW DETAILS <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Project 6 -->
+      <article data-category="Professional Manufacturing" data-tags="Lean Six Sigma, Visio, ERP" class="project-card bg-white flex flex-col overflow-hidden">
+        <div class="relative h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8TaQJ4mc-fSi5OInuvRlb6WarCGoyTHHbsCBNHTwn-Wjot-SSIrwpDXYrtWbr75HNy_rqsDfVwWcSpjBXwbkybvqx5zLXb5fosiw-IrEwA-k65Xkr3hLKPvEkqyjDec26uFvfUVauSIbE-l5KQtzVkF7dvGZY44MoTXLEucDKc-nHhJMpC7FvEhL80uHdTKWlfmv8C8QshNG-yeaW77xOn0zNfNrt9HHPe8v7zSGFg0gbFab0guuBxctYv16J9Cn7XltrE3JyQLZD" alt="Clean optimized floor layout mapped on blueprint for ergonomic production flow according to Lean 5S principles">
+          <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest uppercase">PROFESSIONAL</div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-display text-headline-md mb-2 font-bold">Lean 5S Implementation</h2>
+          <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Leading a facility-wide 5S overhaul that reduced workplace waste by 15% and improved safety scores.</p>
+          <div class="flex flex-wrap gap-2 mb-6" aria-label="Project technologies">
+            <span class="technical-chip">Lean Six Sigma</span>
+            <span class="technical-chip">Visio</span>
+            <span class="technical-chip">ERP</span>
+          </div>
+          <button class="inline-flex items-center text-brand-teal font-bold text-label-md group focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal text-left bg-transparent border-none cursor-pointer">
+            VIEW DETAILS <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+          </button>
+        </div>
+      </article>
+
     </div>
-    <div class="relative w-full md:w-64">
-      <input class="w-full bg-white border border-brand-steel/40 px-4 py-2 pr-10 focus:ring-1 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all font-body-md" placeholder="Search projects..." type="text">
-      <span class="material-symbols-outlined absolute right-3 top-2 text-secondary">search</span>
+  </main>
+
+  <!-- Metrics Section -->
+  <section class="bg-surface-container py-16 mt-section-gap border-y border-outline-variant/30" aria-label="Key efficiency stats">
+    <div class="max-w-container-max mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+      <div>
+        <p class="text-primary font-display text-display font-bold">30%</p>
+        <span class="font-label-caps text-secondary mt-2 block font-bold">EFFICIENCY GAIN</span>
+      </div>
+      <div>
+        <p class="text-primary font-display text-display font-bold">12k+</p>
+        <span class="font-label-caps text-secondary mt-2 block font-bold">LINES OF CODE</span>
+      </div>
+      <div>
+        <p class="text-primary font-display text-display font-bold">14</p>
+        <span class="font-label-caps text-secondary mt-2 block font-bold">PROTOTYPES BUILT</span>
+      </div>
+      <div>
+        <p class="text-primary font-display text-display font-bold">99.8%</p>
+        <span class="font-label-caps text-secondary mt-2 block font-bold">PRECISION RATE</span>
+      </div>
     </div>
   </section>
 
-  <!-- Project Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <article class="project-card bg-white flex flex-col overflow-hidden">
-      <div class="relative h-48 overflow-hidden">
-        <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWn0-JVc9mikJ6jd3VheV2jWOfQgaNCn46l5t29oj75smVUgQzggacKs9JX41w75YQ11sk8h_wwEcon2hBRpKe8WXFs4eoSZcNZdj5jf7Yvm7sG-WfQZvToqVGaETslk8pbwZ98cIQDEUFN_rUsruZr-XZi4s3za0xdvpkYiVMHsa_SEjzmvLFEleaHyYfqgzWqsl8aEs-FMGF9AVABSOsLQEi0Zs0RgVu64Y62GoDGP0qFnUMXel9dmXe05eictQ6Lknzyf196FRe" alt="SCARA Optimization">
-        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">PROFESSIONAL</div>
+  <!-- Footer -->
+  <footer class="w-full border-t border-outline-variant/30 bg-surface pb-20 md:pb-8 pt-12">
+    <div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-4">
+      <span class="font-display text-label-md font-bold text-on-surface">Arthur Mauras</span>
+      <p class="font-display text-label-md text-secondary opacity-80">© 2026 Industrial Engineering Portfolio.</p>
+      
+      <!-- Footer links -->
+      <div class="flex gap-6">
+        <a class="font-display text-label-md text-secondary hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="https://linkedin.com">LinkedIn</a>
+        <a class="font-display text-label-md text-secondary hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="https://github.com/arthurgit10">GitHub</a>
+        <a class="font-display text-label-md text-secondary hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="contact.html">Email</a>
       </div>
-      <div class="p-6 flex flex-col flex-grow">
-        <h3 class="font-display text-headline-md mb-2">SCARA Optimization</h3>
-        <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Optimization of a robotic assembly line increasing throughput by 22% using kinematic simulation.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="technical-chip">MATLAB</span>
-          <span class="technical-chip">AutoCAD</span>
-          <span class="technical-chip">Python</span>
-        </div>
-        <a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
-          VIEW PROJECT <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-      </div>
-    </article>
-    <article class="project-card bg-white flex flex-col overflow-hidden">
-      <div class="relative h-48 overflow-hidden">
-        <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhWyt9OPj0HZE8GRvaXkgshbI5uNLkqmSnC9cwM_0WiU1TYUHwQtiRM-0fwnshW_4cFs_7UUpqueIeFn7iglEmNZGsaph9xKfNMhpcv_tI1d3L3G31kNJ8zN9b-LaCzs8BihQpzMlFx2OiDyuGv3-E0IzB3-jmE1i9SVWhr1OL6nqQ6XLiAaua1t4UmqqtCXFhwbZKYZFQ0eiNjNKueOF6QPk92cmDUJd9piHjdCaZh-y0RXWKKondKVFfw881jJni-XuTdrxAjMGb" alt="Smart Greenhouse v2">
-        <div class="absolute top-4 right-4 bg-brand-teal text-white text-xs font-bold px-2 py-1 tracking-widest">PERSONAL</div>
-      </div>
-      <div class="p-6 flex flex-col flex-grow">
-        <h3 class="font-display text-headline-md mb-2">Smart Greenhouse v2</h3>
-        <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Autonomous climate control system featuring soil moisture sensors and automated irrigation logic.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="technical-chip">C++</span>
-          <span class="technical-chip">Arduino</span>
-          <span class="technical-chip">I2C</span>
-        </div>
-        <a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
-          VIEW PROJECT <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-      </div>
-    </article>
-    <article class="project-card bg-white flex flex-col overflow-hidden">
-      <div class="relative h-48 overflow-hidden">
-        <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSWAK-XJUYtaE29dWTv3ylmnmBiNSzpMG7MWWueSvWBhDINQW7Y4-4uwiXO6Ojzdz7fBnB8DU4IYi0DQHbCYj5gs3AMoUiy7hwLFjBOipBUbv71_7q4_I24zE5bi2_EWYkIz5oklL_O-tJ30Leorm_1kCaYHIaiwCJnZSzzXpY2WZSnN9BUFsQhZckmX1xS-fRaKtBOXQ-lId-PhxhkrmAoLS0PKhYRlj1fIvGdo86MJhlhnZtA_MMFK17QbRKrqkzu-msTf1ojCX6" alt="Supply Chain KPI Tool">
-        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">DASHBOARDS</div>
-      </div>
-      <div class="p-6 flex flex-col flex-grow">
-        <h3 class="font-display text-headline-md mb-2">Supply Chain KPI Tool</h3>
-        <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Real-time monitoring of logistics lead times and inventory turnover rates for regional distributors.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="technical-chip">Tableau</span>
-          <span class="technical-chip">SQL</span>
-          <span class="technical-chip">Excel VBA</span>
-        </div>
-        <a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
-          VIEW PROJECT <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-      </div>
-    </article>
-    <article class="project-card bg-white flex flex-col overflow-hidden">
-      <div class="relative h-48 overflow-hidden">
-        <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-QOBU2_FlflyXbCpOF82H-NMFqDPz0HojVfk5JkRguZFLBwCJIQFyRUImZHsBdMOtwmTkwbhMoqct9hsOPUPF95-HiMQODOspZuqco1nep5ICtxIBzS7-P07FRrj4YKNouKG0mtl_vQvsu6Gri61zEUOiw6ZCQMfExz01iNeSWzMXtx4T2wIXneuK4PyZa-Cw1tOk1ixI0lbM1-vpnbmZDap_lmY7SKLbvwVgDIL0zb3kjq_FEytuTqsGumYm6oJHLY38r5vwQVFY" alt="Custom CNC Jig Design">
-        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">MANUFACTURING</div>
-      </div>
-      <div class="p-6 flex flex-col flex-grow">
-        <h3 class="font-display text-headline-md mb-2">Custom CNC Jig Design</h3>
-        <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Iterative design of universal modular fixtures to reduce setup time by 45% in batch production.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="technical-chip">SolidWorks</span>
-          <span class="technical-chip">GD&T</span>
-          <span class="technical-chip">Steel</span>
-        </div>
-        <a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
-          VIEW PROJECT <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-      </div>
-    </article>
-    <article class="project-card bg-white flex flex-col overflow-hidden">
-      <div class="relative h-48 overflow-hidden">
-        <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8HladpAgCJCU8xhlRkGdvZcqAn_AMYrdc-yzsKKqYE6nHwLH4kgJKDwRQrPVcZvvoQ5c1dSbyPz6Np_acofTkUwkupo-vI0WpaWQxtLJtKWRRuugCeSb7ZXUAfzCLdNyNt8LX6q2jmunTYjg8cwIngHYgYHE6_eAqsjxfJiyl5_bQrFDSyx0XNinb7JxjpNzi87Ks3bziBFpk3r_j4r_trcb6EqxnvhIZUzV9ECcB0GIFrlZ6sCFppThdjphE4eo39q9dYhX6w0y" alt="LoRa Mesh Network">
-        <div class="absolute top-4 right-4 bg-brand-teal text-white text-xs font-bold px-2 py-1 tracking-widest">PERSONAL</div>
-      </div>
-      <div class="p-6 flex flex-col flex-grow">
-        <h3 class="font-display text-headline-md mb-2">LoRa Mesh Network</h3>
-        <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Developing a low-power, long-range communication protocol for remote environmental monitoring.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="technical-chip">ESP32</span>
-          <span class="technical-chip">C++</span>
-          <span class="technical-chip">RadioLib</span>
-        </div>
-        <a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
-          VIEW PROJECT <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-      </div>
-    </article>
-    <article class="project-card bg-white flex flex-col overflow-hidden">
-      <div class="relative h-48 overflow-hidden">
-        <img class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8TaQJ4mc-fSi5OInuvRlb6WarCGoyTHHbsCBNHTwn-Wjot-SSIrwpDXYrtWbr75HNy_rqsDfVwWcSpjBXwbkybvqx5zLXb5fosiw-IrEwA-k65Xkr3hLKPvEkqyjDec26uFvfUVauSIbE-l5KQtzVkF7dvGZY44MoTXLEucDKc-nHhJMpC7FvEhL80uHdTKWlfmv8C8QshNG-yeaW77xOn0zNfNrt9HHPe8v7zSGFg0gbFab0guuBxctYv16J9Cn7XltrE3JyQLZD" alt="Lean 5S Implementation">
-        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 tracking-widest">PROFESSIONAL</div>
-      </div>
-      <div class="p-6 flex flex-col flex-grow">
-        <h3 class="font-display text-headline-md mb-2">Lean 5S Implementation</h3>
-        <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Leading a facility-wide 5S overhaul that reduced workplace waste by 15% and improved safety scores.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="technical-chip">Lean Six Sigma</span>
-          <span class="technical-chip">Visio</span>
-          <span class="technical-chip">ERP</span>
-        </div>
-        <a class="inline-flex items-center text-brand-teal font-bold text-label-md group" href="#">
-          VIEW PROJECT <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-      </div>
-    </article>
-  </div>
-</main>
+    </div>
+  </footer>
 
-<!-- Metrics -->
-<section class="bg-surface-container py-16 mt-section-gap border-y border-outline-variant/30">
-  <div class="max-w-container-max mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-    <div>
-      <div class="text-primary font-display text-display font-bold">30%</div>
-      <div class="font-label-caps text-secondary mt-2">EFFICIENCY GAIN</div>
-    </div>
-    <div>
-      <div class="text-primary font-display text-display font-bold">12k+</div>
-      <div class="font-label-caps text-secondary mt-2">LINES OF CODE</div>
-    </div>
-    <div>
-      <div class="text-primary font-display text-display font-bold">14</div>
-      <div class="font-label-caps text-secondary mt-2">PROTOTYPES BUILT</div>
-    </div>
-    <div>
-      <div class="text-primary font-display text-display font-bold">99.8%</div>
-      <div class="font-label-caps text-secondary mt-2">PRECISION RATE</div>
-    </div>
-  </div>
-</section>
+  <!-- Mobile Bottom Navigation Sémantique & Accessible fixed -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#1A1C1E]/90 backdrop-blur-md border-t border-white/10 z-[60] flex items-center justify-around h-16 px-4 shadow-lg" aria-label="Mobile menu">
+    <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity focus-with-visible" href="index.html">
+      <span class="material-symbols-outlined !text-[24px]" aria-hidden="true">home</span>
+      <span class="font-label-caps uppercase text-[10px]">Home</span>
+      <span class="sr-only">Go to Home page</span>
+    </a>
+    <a class="flex flex-col items-center gap-1 bg-primary-container text-on-primary-container px-4 py-1 rounded-full" href="repository.html" aria-current="page">
+      <span class="material-symbols-outlined !text-[24px]" aria-hidden="true">precision_manufacturing</span>
+      <span class="font-label-caps uppercase text-[10px]">Projects</span>
+      <span class="sr-only">Go to Projects archive</span>
+    </a>
+    <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="index.html#experience">
+      <span class="material-symbols-outlined !text-[24px]" aria-hidden="true">work</span>
+      <span class="font-label-caps uppercase text-[10px]">Experience</span>
+      <span class="sr-only">Go to Experience section</span>
+    </a>
+    <a class="flex flex-col items-center gap-1 text-white opacity-70 hover:opacity-100 transition-opacity" href="contact.html">
+      <span class="material-symbols-outlined !text-[24px]" aria-hidden="true">person</span>
+      <span class="font-label-caps uppercase text-[10px]">Me</span>
+      <span class="sr-only">Go to Contact form</span>
+    </a>
+  </nav>
 
-<!-- Footer -->
-<footer class="w-full border-t border-outline-variant/30 bg-surface pb-20 md:pb-0">
-  <div class="flex flex-col md:flex-row justify-between items-center px-gutter py-10 max-w-container-max mx-auto gap-4">
-    <div class="font-display text-label-md font-bold text-on-surface">Arthur Mauras</div>
-    <p class="font-display text-label-md text-secondary opacity-80">© 2025 Industrial Engineering Portfolio.</p>
-    <div class="flex gap-6">
-      <a class="font-display text-label-md text-secondary hover:text-primary transition-colors" href="https://linkedin.com">LinkedIn</a>
-      <a class="font-display text-label-md text-secondary hover:text-primary transition-colors" href="https://github.com/arthurgit10">GitHub</a>
-      <a class="font-display text-label-md text-secondary hover:text-primary transition-colors" href="contact.html">Email</a>
-    </div>
-  </div>
-</footer>
+  <!-- FAB -->
+  <a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[60] bg-brand-teal text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-all active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal" href="https://calendar.app.google/zUjTPpXxMZJ4FLnw8" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined" aria-hidden="true">calendar_today</span>
+    <span class="font-label-md font-bold uppercase tracking-wider">Let's Chat</span>
+    <span class="sr-only">Book a free chat with me on Google Calendar (Opens in a new tab)</span>
+  </a>
 
-<!-- FAB -->
-<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[60] bg-brand-teal text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-all active:scale-95" href="https://calendar.app.google/zUjTPpXxMZJ4FLnw8" target="_blank">
-  <span class="material-symbols-outlined">calendar_today</span>
-  <span class="font-label-md font-bold uppercase tracking-wider">Let's Chat</span>
-</a>
+  <!-- Fully dynamic JavaScript Filtering and search implementation -->
+  <script>
+    // Elements
+    const searchInput = document.getElementById('project-search');
+    const filterButtons = document.querySelectorAll('#filter-container button');
+    const projectCards = document.querySelectorAll('#projects-grid article');
+    
+    let activeCategory = 'All';
+    let searchQuery = '';
 
-<script>
-  const filterButtons = document.querySelectorAll('button[class*="bg-surface-container-high"]');
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelector('.filter-btn-active')?.classList.replace('filter-btn-active', 'bg-surface-container-high text-secondary hover:text-primary');
-      btn.classList.add('filter-btn-active');
-      btn.classList.remove('bg-surface-container-high', 'text-secondary', 'hover:text-primary');
+    // Filter categories function
+    function applyFilterAndSearch() {
+      projectCards.forEach(card => {
+        const categoryString = card.getAttribute('data-category') || '';
+        const tagsString = card.getAttribute('data-tags') || '';
+        const cardTitle = card.querySelector('h2').innerText.toLowerCase();
+        const cardDesc = card.querySelector('p').innerText.toLowerCase();
+        
+        // Category check
+        let matchesCategory = false;
+        if (activeCategory === 'All') {
+          matchesCategory = true;
+        } else if (activeCategory === 'Arduino') {
+          matchesCategory = categoryString.includes('Arduino') || tagsString.includes('Arduino');
+        } else {
+          matchesCategory = categoryString.includes(activeCategory);
+        }
+
+        // Search check
+        const matchesSearch = cardTitle.includes(searchQuery) || 
+                              cardDesc.includes(searchQuery) || 
+                              tagsString.toLowerCase().includes(searchQuery);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      });
+    }
+
+    // Input search handler
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      applyFilterAndSearch();
     });
-  });
-</script>
+
+    // Option buttons click handler
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Swap active visual styles
+        document.querySelector('.filter-btn-active')?.classList.replace('filter-btn-active', 'bg-surface-container-high text-secondary hover:text-primary');
+        btn.classList.add('filter-btn-active');
+        btn.classList.remove('bg-surface-container-high', 'text-secondary', 'hover:text-primary');
+        
+        // Update selection state
+        activeCategory = btn.getAttribute('data-filter') || 'All';
+        applyFilterAndSearch();
+      });
+    });
+  </script>
 </body>
 </html>
