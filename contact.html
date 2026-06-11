@@ -1,229 +1,339 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth font-sans" lang="en">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Contact | Arthur Mauras - Industrial Engineering</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "inverse-on-surface": "#eef1f5", "primary": "#770075", "tertiary-fixed-dim": "#7ed4d7",
-          "surface-container": "#ebeef2", "surface-container-low": "#f1f4f8", "primary-fixed": "#ffd7f4",
-          "inverse-surface": "#2d3134", "on-secondary": "#ffffff", "secondary": "#506071",
-          "on-error": "#ffffff", "tertiary": "#00484a", "secondary-fixed": "#d3e4f8",
-          "on-background": "#181c1f", "tertiary-fixed": "#9af1f4", "error-container": "#ffdad6",
-          "on-secondary-fixed-variant": "#384858", "inverse-primary": "#ffabf1",
-          "surface-container-lowest": "#ffffff", "on-tertiary-container": "#86dcdf",
-          "on-primary-fixed-variant": "#82007f", "on-secondary-fixed": "#0c1d2b",
-          "on-secondary-container": "#546475", "outline": "#85727f", "outline-variant": "#d7c0cf",
-          "surface-bright": "#f7fafe", "primary-container": "#972192", "on-tertiary-fixed-variant": "#004f51",
-          "surface-container-highest": "#e0e3e7", "secondary-fixed-dim": "#b7c8dc",
-          "on-surface-variant": "#52424e", "on-surface": "#181c1f", "error": "#ba1a1a",
-          "primary-fixed-dim": "#ffabf1", "background": "#f7fafe", "on-primary": "#ffffff",
-          "on-primary-fixed": "#380037", "on-error-container": "#93000a", "on-tertiary": "#ffffff",
-          "on-tertiary-fixed": "#002021", "surface-container-high": "#e5e8ec", "surface-tint": "#9f2999",
-          "on-primary-container": "#ffb8f2", "surface-variant": "#e0e3e7",
-          "tertiary-container": "#006265", "secondary-container": "#d0e1f5",
-          "surface": "#f7fafe", "surface-dim": "#d7dade"
-        },
-        "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-        "spacing": { "container-max": "1200px", "section-gap": "80px", "margin-mobile": "16px", "gutter": "24px", "base": "8px" },
-        "fontFamily": {
-          "body-lg": ["Inter"], "label-md": ["Inter"], "label-caps": ["JetBrains Mono"],
-          "display": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"]
-        },
-        "fontSize": {
-          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-          "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
-          "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
-          "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-          "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <!-- Technical SEO & Metadata -->
+  <title>Contact | Arthur Mauras - Industrial Engineering Portfolio</title>
+  <meta name="description" content="Get in touch with Arthur Mauras, Industrial Engineer specializing in process optimization, automation, and real-time operations performance tracking.">
+  <meta name="keywords" content="Connect with Arthur Mauras, process collaboration, IoT consulting, hiring industrial engineers">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arthurgit10.github.io/contact.html">
+  <meta property="og:title" content="Contact | Arthur Mauras - Industrial Engineering">
+  <meta property="og:description" content="Reach out to discuss process layout design, automation solutions, or digital operations dashboard systems.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Twitter Cards -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://arthurgit10.github.io/contact.html">
+  <meta property="twitter:title" content="Contact | Arthur Mauras - Industrial Engineering">
+  <meta property="twitter:description" content="Reach out to discuss process layout design, automation solutions, or digital operations dashboard systems.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Preconnected Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- STEP 1: IMPORT EMAILJS OFFICIAL CLIENT SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // NOTE: Replace "YOUR_EMAILJS_PUBLIC_KEY" with your real Public Key from the Account admin panel.
+      emailjs.init({
+        publicKey: "YOUR_EMAILJS_PUBLIC_KEY",
+      });
+    })();
+  </script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#eef1f5", "primary": "#770075", "tertiary-fixed-dim": "#7ed4d7",
+            "surface-container": "#ebeef2", "surface-container-low": "#f1f4f8", "primary-fixed": "#ffd7f4",
+            "inverse-surface": "#2d3134", "on-secondary": "#ffffff", "secondary": "#506071",
+            "on-error": "#ffffff", "tertiary": "#00484a", "secondary-fixed": "#d3e4f8",
+            "on-background": "#181c1f", "tertiary-fixed": "#9af1f4", "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#384858", "inverse-primary": "#ffabf1",
+            "surface-container-lowest": "#ffffff", "on-tertiary-container": "#86dcdf",
+            "on-primary-fixed-variant": "#82007f", "on-secondary-fixed": "#0c1d2b",
+            "on-secondary-container": "#546475", "outline": "#85727f", "outline-variant": "#d7c0cf",
+            "surface-bright": "#f7fafe", "primary-container": "#972192", "on-tertiary-fixed-variant": "#004f51",
+            "surface-container-highest": "#e0e3e7", "secondary-fixed-dim": "#b7c8dc",
+            "on-surface-variant": "#52424e", "on-surface": "#181c1f", "error": "#ba1a1a",
+            "primary-fixed-dim": "#ffabf1", "background": "#f7fafe", "on-primary": "#ffffff",
+            "on-primary-fixed": "#380037", "on-error-container": "#93000a", "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#002021", "surface-container-high": "#e5e8ec", "surface-tint": "#9f2999",
+            "on-primary-container": "#ffb8f2", "surface-variant": "#e0e3e7",
+            "tertiary-container": "#006265", "secondary-container": "#d0e1f5",
+            "surface": "#f7fafe", "surface-dim": "#d7dade", "brand-teal": "#2B898C", "brand-steel": "#A2B3C6"
+          },
+          "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+          "spacing": { "container-max": "1200px", "section-gap": "80px", "margin-mobile": "16px", "gutter": "24px", "base": "8px" },
+          "fontFamily": {
+            "sans": ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            "mono": ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+            "body-lg": ["Inter"], "label-md": ["Inter"], "label-caps": ["JetBrains Mono"],
+            "display": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+            "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+          }
         }
       }
     }
-  }
-</script>
-<style>
-  .technical-grid {
-    background-image: radial-gradient(#A2B3C6 0.5px, transparent 0.5px);
-    background-size: 24px 24px;
-    opacity: 0.15;
-  }
-  .form-input-focus:focus {
-    outline: none;
-    border-color: #2B898C;
-    box-shadow: 0 0 0 4px rgba(43, 137, 140, 0.1);
-  }
-</style>
-</head>
-<body class="bg-[#ECEFF3] text-on-surface font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed pb-20 md:pb-0">
+  </script>
+  <style>
+    .technical-grid {
+      background-image: radial-gradient(#A2B3C6 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.15;
+    }
+    .form-input-focus:focus {
+      outline: none;
+      border-color: #2B898C;
+      box-shadow: 0 0 0 4px rgba(43, 137, 140, 0.1);
+    }
+    @media (max-width: 767px) { body { padding-bottom: 72px; } }
+  </style>
+<script src="/_aistudio-iframe.js"></script></head>
+<body class="bg-[#ECEFF3] text-on-surface font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed antialiased">
 
-<!-- TopNavBar -->
-<nav class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50">
-  <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
-    <a class="font-headline-md text-headline-md font-bold text-surface-container-lowest" href="index.html">Arthur Mauras</a>
-    <div class="hidden md:flex items-center gap-8">
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="index.html">About</a>
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="repository.html">Projects</a>
-      <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors" href="index.html#experience">Experience</a>
-      <a class="font-label-md text-label-md text-primary-fixed font-bold" href="contact.html">Contact</a>
-      <a class="bg-brand-teal text-white px-6 py-2 font-label-md font-bold uppercase tracking-wider hover:opacity-90 transition-all ml-4" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank">RESUME</a>
-    </div>
-  </div>
-</nav>
+  <!-- Skiplink for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded focus:z-[100] focus:outline-none">
+    Skip to Main Content
+  </a>
 
-<main class="pt-32 pb-section-gap px-gutter relative overflow-hidden">
-  <div class="absolute top-0 left-0 w-full h-full technical-grid pointer-events-none"></div>
-  <div class="max-w-container-max mx-auto relative">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-      <!-- Left Content -->
-      <div class="lg:col-span-5 space-y-base">
-        <div class="inline-block bg-[#A2B3C6]/10 px-3 py-1 mb-4">
-          <span class="font-label-caps text-label-caps text-secondary uppercase">Open to Opportunities</span>
-        </div>
-        <h1 class="font-display text-display text-on-surface mb-6">Let's build <br><span class="text-primary">something robust.</span></h1>
-        <p class="font-body-lg text-body-lg text-secondary max-w-md mb-8">
-          Whether you're looking for process optimization, industrial design collaboration, or technical project management, I'm ready to apply rigorous engineering principles to your challenges.
-        </p>
-        <div class="space-y-6 pt-8">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-white flex items-center justify-center border border-[#A2B3C6]/30">
-              <span class="material-symbols-outlined text-[#2B898C]">mail</span>
-            </div>
-            <div>
-              <p class="font-label-caps text-label-caps text-secondary mb-1">EMAIL INQUIRIES</p>
-              <p class="font-label-md text-label-md text-on-surface">arthur.mauras [at] gmail [dot] com</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-white flex items-center justify-center border border-[#A2B3C6]/30">
-              <span class="material-symbols-outlined text-[#2B898C]">location_on</span>
-            </div>
-            <div>
-              <p class="font-label-caps text-label-caps text-secondary mb-1">CURRENT LOCATION</p>
-              <p class="font-label-md text-label-md text-on-surface">Europe • Global Availability</p>
-            </div>
-          </div>
-        </div>
+  <!-- TopNavBar Header sémantique fixe -->
+  <header class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50">
+    <nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16" aria-label="Main Navigation">
+      <a class="font-headline-md text-headline-md font-bold text-surface-container-lowest focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="index.html">Arthur Mauras</a>
+      
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="index.html">About</a>
+        <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="repository.html">Projects</a>
+        <a class="font-label-md text-label-md text-surface-variant hover:text-primary-fixed transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="index.html#experience">Experience</a>
+        <a class="font-label-md text-label-md text-primary-fixed font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="contact.html" aria-current="page">Contact</a>
+        <a class="bg-brand-teal text-white px-6 py-2 font-label-md font-bold uppercase tracking-wider hover:opacity-90 transition-all ml-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="https://docs.google.com/document/d/1CuYmbYvRfVhjMZ8lgCPYKiG80dBSf3BmN4BUD3DpBb0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
       </div>
+    </nav>
+  </header>
 
-      <!-- Form Section -->
-      <div class="lg:col-span-7">
-        <div class="bg-white p-8 md:p-12 border border-[#A2B3C6]/30 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
-          <form class="space-y-6" onsubmit="handleSubmit(event)">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="space-y-2">
-                <label class="font-label-caps text-label-caps text-secondary" for="name">FULL NAME</label>
-                <input class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="name" placeholder="John Doe" required type="text">
+  <!-- Main Sémantique -->
+  <main class="pt-32 pb-section-gap px-gutter relative overflow-hidden" id="main-content">
+    <div class="absolute top-0 left-0 w-full h-full technical-grid pointer-events-none" aria-hidden="true"></div>
+    <div class="max-w-container-max mx-auto relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Content -->
+        <section class="lg:col-span-5 space-y-base" aria-labelledby="contact-heading">
+          <div class="inline-block bg-[#A2B3C6]/10 px-3 py-1 mb-4">
+            <span class="font-label-caps text-label-caps text-secondary uppercase font-bold">Open to Opportunities</span>
+          </div>
+          <h1 id="contact-heading" class="font-display text-display text-on-surface mb-6">Let's build <br><span class="text-primary">something robust.</span></h1>
+          <p class="font-body-lg text-body-lg text-secondary max-w-md mb-8">
+            Whether you're looking for process optimization, industrial design collaboration, or technical project management, I'm ready to apply rigorous engineering principles to your challenges.
+          </p>
+          <div class="space-y-6 pt-8">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white flex items-center justify-center border border-[#A2B3C6]/30" aria-hidden="true">
+                <span class="material-symbols-outlined text-[#2B898C]">mail</span>
               </div>
-              <div class="space-y-2">
-                <label class="font-label-caps text-label-caps text-secondary" for="email">EMAIL ADDRESS</label>
-                <input class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="email" placeholder="john@company.com" required type="email">
+              <div>
+                <p class="font-label-caps text-label-caps text-secondary mb-1 font-bold">EMAIL INQUIRIES</p>
+                <p class="font-label-md text-label-md text-on-surface">arthur.mauras [at] gmail [dot] com</p>
               </div>
             </div>
-            <div class="space-y-2">
-              <label class="font-label-caps text-label-caps text-secondary" for="subject">SUBJECT</label>
-              <select class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all appearance-none cursor-pointer" id="subject">
-                <option>General Inquiry</option>
-                <option>Project Collaboration</option>
-                <option>Consulting Request</option>
-                <option>Hiring Interest</option>
-              </select>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white flex items-center justify-center border border-[#A2B3C6]/30" aria-hidden="true">
+                <span class="material-symbols-outlined text-[#2B898C]">location_on</span>
+              </div>
+              <div>
+                <p class="font-label-caps text-label-caps text-secondary mb-1 font-bold">CURRENT LOCATION</p>
+                <p class="font-label-md text-label-md text-on-surface">Europe • Global Availability</p>
+              </div>
             </div>
-            <div class="space-y-2">
-              <label class="font-label-caps text-label-caps text-secondary" for="message">MESSAGE</label>
-              <textarea class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="message" placeholder="Detail your project requirements or inquiry..." required rows="5"></textarea>
-            </div>
-            <div class="space-y-2">
-              <label class="font-label-caps text-label-caps text-secondary" for="verification">VERIFICATION: WHAT IS 12 + 8?</label>
-              <input class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="verification" placeholder="Enter the result..." required type="text">
-              <p class="text-[10px] font-label-caps text-secondary/60 uppercase mt-1">Required to prevent automated spam.</p>
-            </div>
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-4">
-              <p class="font-label-md text-label-md text-secondary/60 italic">Typical response time: 24-48 hours.</p>
-              <button class="bg-[#2B898C] text-white px-10 py-4 font-headline-md flex items-center justify-center gap-3 transition-all hover:brightness-110 active:scale-[0.98]" type="submit">
-                Transmit Message
-                <span class="material-symbols-outlined">send</span>
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#A2B3C6]/20 mt-12 border border-[#A2B3C6]/30 overflow-hidden">
-          <div class="bg-white/50 p-6"><p class="font-display text-headline-lg text-primary mb-1">100%</p><p class="font-label-caps text-label-caps text-secondary">NDA COMPLIANT</p></div>
-          <div class="bg-white/50 p-6"><p class="font-display text-headline-lg text-primary mb-1">24h</p><p class="font-label-caps text-label-caps text-secondary">RESPONSE TIME</p></div>
-          <div class="bg-white/50 p-6 hidden md:block"><p class="font-display text-headline-lg text-primary mb-1">ISO</p><p class="font-label-caps text-label-caps text-secondary">PROCESS READY</p></div>
-        </div>
+          </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="lg:col-span-7" aria-label="Secure Contact Form">
+          <div class="bg-white p-8 md:p-12 border border-[#A2B3C6]/30 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+            
+            <!-- Optimized Form for EmailJS with proper name labels -->
+            <form id="emailjs-contact-form" class="space-y-6">
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Name -->
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-secondary block font-bold cursor-pointer" for="fullname">FULL NAME <span class="text-error" aria-hidden="true">*</span></label>
+                  <input class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="fullname" name="from_name" placeholder="John Doe" required type="text" aria-required="true">
+                </div>
+                <!-- Email -->
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-secondary block font-bold cursor-pointer" for="email">EMAIL ADDRESS <span class="text-error" aria-hidden="true">*</span></label>
+                  <input class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="email" name="reply_to" placeholder="john@company.com" required type="email" aria-required="true">
+                </div>
+              </div>
+
+              <!-- Subject -->
+              <div class="space-y-2">
+                <label class="font-label-caps text-label-caps text-secondary block font-bold cursor-pointer" for="subject">SUBJECT</label>
+                <select class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all cursor-pointer" id="subject" name="subject">
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Project Collaboration">Project Collaboration</option>
+                  <option value="Consulting Request">Consulting Request</option>
+                  <option value="Hiring Interest">Hiring Interest</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="space-y-2">
+                <label class="font-label-caps text-label-caps text-secondary block font-bold cursor-pointer" for="message">MESSAGE <span class="text-error" aria-hidden="true">*</span></label>
+                <textarea class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="message" name="message" placeholder="Detail your project requirements or inquiry..." required rows="5" aria-required="true"></textarea>
+              </div>
+
+              <!-- Spam prevention (math validation) -->
+              <div class="space-y-2">
+                <label class="font-label-caps text-label-caps text-secondary block font-bold text-red-700 cursor-pointer" for="verification">VERIFICATION SPAM CONTROL: WHAT IS 12 + 8? <span class="text-error" aria-hidden="true">*</span></label>
+                <input class="w-full bg-white border border-[#A2B3C6] px-4 py-3 font-body-md form-input-focus transition-all" id="verification" placeholder="Enter the result..." required type="text" aria-required="true" aria-describedby="verification-hint">
+                <p id="verification-hint" class="text-[10px] font-label-caps text-secondary/60 uppercase mt-1">Required to prevent automated spam queries.</p>
+              </div>
+
+              <!-- Feedback message bar -->
+              <p id="form-status" class="text-xs font-bold font-mono tracking-wider text-center p-3 rounded bg-slate-50 border border-slate-100 hidden" role="status"></p>
+
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-4">
+                <p class="font-label-md text-label-md text-secondary/60 italic">Typical response time: 24-48 hours.</p>
+                <button id="submit-btn" class="bg-[#2B898C] text-white px-10 py-4 font-headline-md flex items-center justify-center gap-3 transition-all hover:brightness-110 active:scale-[0.98] cursor-pointer" type="submit">
+                  Transmit Message
+                  <span class="material-symbols-outlined" aria-hidden="true">send</span>
+                </button>
+              </div>
+            </form>
+
+          </div>
+          
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#A2B3C6]/20 mt-12 border border-[#A2B3C6]/30 overflow-hidden">
+            <div class="bg-white/50 p-6"><p class="font-display text-headline-lg text-primary mb-1">100%</p><p class="font-label-caps text-label-caps text-secondary font-bold">NDA COMPLIANT</p></div>
+            <div class="bg-white/50 p-6"><p class="font-display text-headline-lg text-primary mb-1">24h</p><p class="font-label-caps text-label-caps text-secondary font-bold">RESPONSE TIME</p></div>
+            <div class="bg-white/50 p-6 hidden md:block"><p class="font-display text-headline-lg text-primary mb-1">ISO</p><p class="font-label-caps text-label-caps text-secondary font-bold">PROCESS READY</p></div>
+          </div>
+        </section>
+
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
-<!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-outline-variant w-full py-section-gap">
-  <div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-base">
-    <div class="font-headline-md text-headline-md text-primary font-bold">Arthur Mauras</div>
-    <p class="font-body-md text-body-md text-on-secondary-fixed-variant">© 2025 Arthur Mauras • Industrial Engineering</p>
-    <div class="flex gap-8">
-      <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors" href="https://linkedin.com">LinkedIn</a>
-      <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors" href="https://github.com/arthurgit10">GitHub</a>
-      <a class="font-body-md text-body-md text-tertiary font-bold" href="mailto:arthur.mauras@gmail.com">Email</a>
+  <!-- Footer -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant w-full py-12 pb-24 md:pb-12">
+    <div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-base">
+      <span class="font-headline-md text-headline-md text-primary font-bold">Arthur Mauras</span>
+      <p class="font-body-md text-body-md text-on-secondary-fixed-variant">© 2026 Arthur Mauras • Industrial Engineering</p>
+      
+      <!-- Footer links -->
+      <div class="flex gap-8">
+        <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="https://linkedin.com">LinkedIn</a>
+        <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="https://github.com/arthurgit10">GitHub</a>
+        <a class="font-body-md text-body-md text-tertiary font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="mailto:arthur.mauras@gmail.com">Email</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Mobile Bottom Nav -->
-<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#1A1C1E] md:hidden shadow-lg">
-  <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="index.html">
-    <span class="material-symbols-outlined text-[24px]">home</span>
-    <span class="font-label-caps text-label-caps mt-1">Home</span>
-  </a>
-  <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="repository.html">
-    <span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
-    <span class="font-label-caps text-label-caps mt-1">Projects</span>
-  </a>
-  <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="index.html#experience">
-    <span class="material-symbols-outlined text-[24px]">work</span>
-    <span class="font-label-caps text-label-caps mt-1">Experience</span>
-  </a>
-  <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container w-full h-full" href="contact.html">
-    <span class="material-symbols-outlined text-[24px]">person</span>
-    <span class="font-label-caps text-label-caps mt-1">Me</span>
-  </a>
-</nav>
+  <!-- Mobile Bottom Nav Sémantique & Accessible fixed -->
+  <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#1A1C1E] md:hidden shadow-lg" aria-label="Mobile Navigation">
+    <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="index.html">
+      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">home</span>
+      <span class="font-label-caps text-label-caps mt-1">Home</span>
+      <span class="sr-only">Go to Home page</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="repository.html">
+      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">precision_manufacturing</span>
+      <span class="font-label-caps text-label-caps mt-1">Projects</span>
+      <span class="sr-only">Go to Projects repository</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="index.html#experience">
+      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">work</span>
+      <span class="font-label-caps text-label-caps mt-1">Experience</span>
+      <span class="sr-only">Go to Experience timeline</span>
+    </a>
+    <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container w-full h-full" href="contact.html" aria-current="page">
+      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">person</span>
+      <span class="font-label-caps text-label-caps mt-1">Me</span>
+      <span class="sr-only">Go to contact form</span>
+    </a>
+  </nav>
 
-<script>
-  const inputs = document.querySelectorAll('input, textarea, select');
-  inputs.forEach(input => {
-    input.addEventListener('focus', () => {
-      input.parentElement.querySelector('label')?.classList.replace('text-secondary', 'text-tertiary');
+  <!-- FAB -->
+  <a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[60] bg-brand-teal text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-all active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal" href="https://calendar.app.google/zUjTPpXxMZJ4FLnw8" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined" aria-hidden="true">calendar_today</span>
+    <span class="font-label-md font-bold uppercase tracking-wider">Let's Chat</span>
+    <span class="sr-only">Schedule a chat with me on Google Calendar (Opens in a new tab)</span>
+  </a>
+
+  <!-- INTERACTIVE FORM LOGIC WITH MATH SPAM FILTER AND EMAILJS -->
+  <script>
+    // Inputs border helper
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('focus', () => {
+        const label = input.parentElement.querySelector('label');
+        if (label) label.classList.replace('text-secondary', 'text-tertiary');
+      });
+      input.addEventListener('blur', () => {
+        const label = input.parentElement.querySelector('label');
+        if (label) label.classList.replace('text-tertiary', 'text-secondary');
+      });
     });
-    input.addEventListener('blur', () => {
-      input.parentElement.querySelector('label')?.classList.replace('text-tertiary', 'text-secondary');
-    });
-  });
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const v = document.getElementById('verification').value.trim();
-    if (v !== '20') { alert('Verification failed. Hint: 12 + 8 = ?'); return; }
-    alert('Message sent! I\'ll get back to you within 24-48 hours.');
-    e.target.reset();
-  }
-</script>
-<!-- FAB -->
-<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[60] bg-brand-teal text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-all active:scale-95" href="https://calendar.app.google/zUjTPpXxMZJ4FLnw8" target="_blank">
-  <span class="material-symbols-outlined">calendar_today</span>
-  <span class="font-label-md font-bold uppercase tracking-wider">Let's Chat</span>
-</a>
+    const form = document.getElementById('emailjs-contact-form');
+    const statusBox = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Clear previous status
+      statusBox.classList.add('hidden');
+      statusBox.classList.remove('text-green-700', 'bg-green-50', 'border-green-100', 'text-red-700', 'bg-red-50', 'border-red-100', 'text-amber-700', 'bg-amber-50', 'border-amber-100');
+
+      // 1. Math Spam Verification Logic
+      const spamAnswer = document.getElementById('verification').value.trim();
+      if (spamAnswer !== '20') {
+        statusBox.innerText = '✗ Anti-Spam Verification Failed. Hint: 12 + 8 = 20.';
+        statusBox.className = 'text-xs font-bold font-mono tracking-wider text-center p-3 rounded text-red-700 bg-red-50 border border-red-200 block';
+        return;
+      }
+
+      // Show transmitting state
+      statusBox.innerText = '⚙ Securely transmitting your message...';
+      statusBox.className = 'text-xs font-bold font-mono tracking-wider text-center p-3 rounded text-amber-700 bg-amber-50 border border-amber-200 block';
+      submitBtn.disabled = true;
+
+      // 2. EmailJS Submission
+      // Replace 'YOUR_EMAILJS_SERVICE_ID' and 'YOUR_EMAILJS_TEMPLATE_ID' with corresponding values from command panel.
+      emailjs.sendForm('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', this)
+        .then(() => {
+          statusBox.innerText = '✓ Message Transmitted Successfully! I will reach out within 24 hours.';
+          statusBox.className = 'text-xs font-bold font-mono tracking-wider text-center p-3 rounded text-green-700 bg-green-50 border border-green-200 block';
+          form.reset();
+          submitBtn.disabled = false;
+        }, (error) => {
+          statusBox.innerText = '✗ Transmission failed: ' + (error.text || 'Please check your EmailJS template credentials.');
+          statusBox.className = 'text-xs font-bold font-mono tracking-wider text-center p-3 rounded text-red-700 bg-red-50 border border-red-200 block';
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
 </body>
 </html>
+
