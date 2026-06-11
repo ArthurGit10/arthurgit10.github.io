@@ -110,8 +110,8 @@
     Skip to Main Content
   </a>
 
-  <!-- TopNavBar Header sémantique fixe -->
-  <header class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50">
+  <!-- Header & Navigation Semantics fixed -->
+  <header class="bg-[#1A1C1E] border-t-4 border-primary fixed top-0 w-full z-50 transition-shadow duration-200" id="navbar">
     <nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16" aria-label="Main Navigation">
       <a class="font-headline-md text-headline-md font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="index.html">Arthur Mauras</a>
       
@@ -232,42 +232,42 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-surface-container-lowest border-t border-outline-variant w-full py-12 pb-24 md:pb-12">
+  <!-- Footer Semantics fixed -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant/30 pb-24 md:pb-8 pt-12">
     <div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-base">
-      <span class="font-headline-md text-headline-md text-primary font-bold">Arthur Mauras</span>
-      <p class="font-body-md text-body-md text-on-secondary-fixed-variant">© 2026 Arthur Mauras • Industrial Engineering</p>
+      <div class="font-headline-md text-headline-md text-primary font-bold">Arthur Mauras</div>
+      <p class="font-body-md text-body-md text-on-secondary-fixed-variant">© 2026 Arthur Mauras • Industrial Engineering Portfolio</p>
       
       <!-- Footer links -->
       <div class="flex gap-8">
-        <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="https://linkedin.com">LinkedIn</a>
-        <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="https://github.com/arthurgit10">GitHub</a>
+        <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal font-semibold" href="https://www.linkedin.com/in/arthur-mauras-engineer/">LinkedIn</a>
+        <a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-tertiary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal font-semibold" href="https://github.com/arthurgit10">GitHub</a>
         <a class="font-body-md text-body-md text-tertiary font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-teal" href="mailto:arthur.mauras@gmail.com">Email</a>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile Bottom Nav Sémantique & Accessible fixed -->
-  <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#1A1C1E] md:hidden shadow-lg" aria-label="Mobile Navigation">
-    <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="index.html">
-      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">home</span>
-      <span class="font-label-caps text-label-caps mt-1">Home</span>
-      <span class="sr-only">Go to Home page</span>
+  <!-- Mobile Bottom Nav Sémantique fixed -->
+  <nav class="fixed bottom-0 left-0 w-full h-16 z-50 flex justify-around items-center bg-[#1A1C1E]/95 backdrop-blur-md shadow-xl md:hidden" aria-label="Mobile Navigation">
+    <a class="flex flex-col items-center justify-center flex-1 h-full text-surface-variant hover:text-primary-fixed hover:bg-white/5 transition-colors duration-200" href="index.html">
+      <span class="material-symbols-outlined" aria-hidden="true">home</span>
+      <span class="font-label-caps text-[11px] mt-0.5">Home</span>
+      <span class="sr-only">Go to Home</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="repository.html">
-      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">precision_manufacturing</span>
-      <span class="font-label-caps text-label-caps mt-1">Projects</span>
-      <span class="sr-only">Go to Projects repository</span>
+    <a class="flex flex-col items-center justify-center flex-1 h-full text-surface-variant hover:text-primary-fixed hover:bg-white/5 transition-colors duration-200" href="repository.html">
+      <span class="material-symbols-outlined" aria-hidden="true">precision_manufacturing</span>
+      <span class="font-label-caps text-[11px] mt-0.5">Projects</span>
+      <span class="sr-only">Go to Projects</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-surface-variant w-full h-full" href="index.html#experience">
-      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">work</span>
-      <span class="font-label-caps text-label-caps mt-1">Experience</span>
-      <span class="sr-only">Go to Experience timeline</span>
+    <a class="flex flex-col items-center justify-center flex-1 h-full text-surface-variant hover:text-primary-fixed hover:bg-white/5 transition-colors duration-200" href="index.html#experience">
+      <span class="material-symbols-outlined" aria-hidden="true">work</span>
+      <span class="font-label-caps text-[11px] mt-0.5">Experience</span>
+      <span class="sr-only">Go to Experience</span>
     </a>
-    <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container w-full h-full" href="contact.html" aria-current="page">
-      <span class="material-symbols-outlined text-[24px]" aria-hidden="true">person</span>
-      <span class="font-label-caps text-label-caps mt-1">Me</span>
-      <span class="sr-only">Go to contact form</span>
+    <a class="flex flex-col items-center justify-center flex-1 h-full bg-primary-container text-on-primary-container font-semibold border-t-2 border-[#ffb8f2] transition-colors duration-200" href="contact.html" aria-current="page">
+      <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+      <span class="font-label-caps text-[11px] mt-0.5">Contact</span>
+      <span class="sr-only">Go to Contact</span>
     </a>
   </nav>
 
@@ -330,6 +330,14 @@
           statusBox.className = 'text-xs font-bold font-mono tracking-wider text-center p-3 rounded text-red-700 bg-red-50 border border-red-200 block';
           submitBtn.disabled = false;
         });
+    });
+
+    // Simple Scroll Header Shadow scripts
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (nav) {
+        nav.classList.toggle('shadow-md', window.scrollY > 50);
+      }
     });
   </script>
 </body>
