@@ -1,7 +1,7 @@
 window.projectsData = [
   {
     id: "scara-optimization",
-    title: "SCARA Optimization",
+    title: "TBD",
     category: "Professional",
     tags: ["MATLAB", "AutoCAD", "Python"],
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600",
