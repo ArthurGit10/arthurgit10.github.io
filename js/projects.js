@@ -1,23 +1,20 @@
 window.projectsData = [
   {
-    id: "scara-optimization",
-    title: "TBD",
+    id: "tms-deployment",
+    title: "TMS Deployment in Veolia",
     category: "Professional",
-    tags: ["MATLAB", "AutoCAD", "Python"],
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600",
-    imageAlt: "Kinematic CAD simulation model of a high capacity SCARA robotic automation arm",
-    shortDescription: "Optimization of a robotic assembly line increasing throughput by 22% using kinematic simulation.",
+    tags: ["TMS", "STRATEGIC PROJECT", "DATA ANALYSIS"],
+    image: "assets/images/tms-deployment.png",
+    imageAlt: "Image of TMS Deployment Report",
+    shortDescription: "analyzing 360K+ delivery lines and processes with 135 variations to define the best deployment strategy",
     featured: true,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
-      <p class="text-on-surface-variant font-body-md">This project focused on the throughput optimization of an electronic component assembly line featuring high-speed SCARA robotic arms. By using advanced kinematic and dynamic modeling, we analyzed joint velocity limits, path profiles, and gripper response cycles to extract maximum speed without over-stressing mechanical joints.</p>
+      <p class="text-on-surface-variant font-body-md">This project focused on suporting logistics to find the most effective way to deploy a TMS in Veolia WTS</p>
       
       <h3 class="text-on-surface font-display text-body-lg font-bold mt-6">Key Accomplishments & Results</h3>
       <ul class="list-disc pl-5 mt-2 space-y-2 text-on-surface-variant font-body-md text-sm">
-        <li>Re-engineered physical movement trajectories inside MATLAB using cubic spline profiles, which eliminated sudden dynamic torque transitions and minimized physical joint vibrations.</li>
-        <li>Improved SCARA robotic pick-and-place cycle periods from 1.4 seconds down to 1.09 seconds.</li>
-        <li>Deployed predictive dynamic models inside Python to proactively identify mechanical alignment errors and prevent scheduled downtime.</li>
-        <li>Achieved a cumulative line throughput increase of 22% overall with zero additional factory floor capital expenditures.</li>
+        <li>Supported the Global Transportation Management System (TMS) on implementation by performing quantitative and qualitative data analysis on our 90+ plants and warehouse, 360K+ global deliveries/year in SAP, with appropriate reports to SC VP & Continuous Improvement Director</li>
       </ul>
     `
   },
