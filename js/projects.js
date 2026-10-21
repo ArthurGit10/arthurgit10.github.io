@@ -19,79 +19,81 @@ window.projectsData = [
     `
   },
   {
-    id: "smart-greenhouse",
-    title: "Smart Greenhouse v2",
+    id: "anti-sway-system",
+    title: "Modelisation of anti-sway system in gantry cranes",
     category: "Personal",
-    tags: ["C++", "Arduino", "I2C", "ESP32"],
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=600",
-    imageAlt: "Close-up of smart greenhouse automated climate system circuit sensors wired into an Arduino node",
-    shortDescription: "Autonomous climate control system featuring soil moisture sensors and automated irrigation logic.",
+    tags: ["C++","PID Control", "Arduino", "I2C", "ESP32"],
+    image: "assets/images/Anti-Sway_System.png",
+    imageAlt: "Modelisation of anti-sway system in gantry cranes",
+    shortDescription: "I was curious about container unloading efficiency under Marseille's strong 'mistral' winds.",
     featured: true,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
-      <p class="text-on-surface-variant font-body-md">For the Smart Greenhouse v2 project, I designed and fabricated a fully autonomous botanical environmental manager. It controls ambient lighting, fans, soil hydration level, and nutrient delivery systems using a network of low-cost, high-reliability microcontrollers.</p>
+      <p class="text-on-surface-variant font-body-md">Curious about container unloading efficiency under the strong Marseille "mistral" wind (south of france is very windy),</p>
       
       <h3 class="text-on-surface font-display text-body-lg font-bold mt-6">Key Accomplishments & Results</h3>
       <ul class="list-disc pl-5 mt-2 space-y-2 text-on-surface-variant font-body-md text-sm">
-        <li>Designed an Arduino/ESP32 firmware architecture with multiple non-blocking hardware loops (using millis-timers instead of long delays).</li>
-        <li>Created custom I2C sensor bus connectors integrating high-accuracy temperature/humidity (SHT31) and capacitive soil moisture sensors.</li>
-        <li>Engineered a custom solid-state relay distribution board to toggle water pumps (12V solenoid valves) safely away from human components.</li>
-        <li>Reduced water consumption by 35% compared to timed irrigation cycles by utilizing live soil-dryness threshold telemetry.</li>
+        <li>I modeled crane dynamics with SCILAB PID control and tested my hypotheses using an Arduino and Lego anti-sway prototype.</li>
+        <li>Using official PACECO Documentation and my own research, I developed a mathematical model of the crane's sway dynamics and implemented a PID control algorithm to stabilize the load during sway/wind gusts.</li>
+        <li>To validate my findings, I conducted an on-site visit to a CMA CGM ship at the port of Marseille.</li>
+        <li>Ultimately, I determined that motor sizing alone is insufficient for stabilization, requiring a powerful coupled motor and piston damper system instead.</li>
       </ul>
     `
   },
   {
-    id: "supply-chain-kpi",
-    title: "Supply Chain KPI Tool",
-    category: "Dashboards",
-    tags: ["Tableau", "SQL", "Excel VBA"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
-    imageAlt: "Supply chain management metrics visualized neatly on a large high fidelity Tableau tablet dashboard",
-    shortDescription: "Real-time monitoring of logistics lead times and inventory turnover rates for regional distributors.",
+    id: "Start-Up-Dev",
+    title: "Digital Twin",
+    category: "Professional",
+    tags: ["Digital Twin", "C#","Vertex optimization","VR"],
+    image: "assets/images/VR_Sim.png",
+    imageAlt: "Digital Twin of 20.000 Tons aluminum stamping process for Airbus A320 landing gear",
+    shortDescription: "3D Simulation of 20.000 Tons aluminum stamping process for Airbus A320 landing gear",
     featured: true,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
-      <p class="text-on-surface-variant font-body-md">This business intelligence initiative focused on unifying fragmented distribution data formats across 4 regional warehouses into a clean, operational Tableau and SQL pipeline.</p>
+      <p class="text-on-surface-variant font-body-md">Designed VR simulation solution to modernize Aubert & Duval's 20,000-ton aluminum stamping press and improve process repeatability.</p>
       
       <h3 class="text-on-surface font-display text-body-lg font-bold mt-6">Key Accomplishments & Results</h3>
       <ul class="list-disc pl-5 mt-2 space-y-2 text-on-surface-variant font-body-md text-sm">
-        <li>Engineered an automated SQL server routine (ETL) to cleanse, merge, and deduplicate shipping rows nightly.</li>
-        <li>Designed a custom, high-contrast operational layout utilizing Material Design principles to display real-time safety stock alerts.</li>
-        <li>Created automated forecasting spreadsheets powered by legacy VBA scripts, translating legacy ERP CSV outputs into instant load forms.</li>
-        <li>Enabled logistics teams to identify visual shipping bottlenecks, cutting transit dwell delays by an average of 1.2 days.</li>
+        <li>Earned National Entrepreneur Status (SNEE) recognition for Digital Twin in Industrial application and received initial funding for start-up development.</li>
+        <li>Without prior knowledge, I followed up on a project between my engineering school and Aubert & Duval, worldwide leader in aluminium to improve the repeatability and reproducibility of their aluminium stamping press and lower total costs.</li>
+        <li>Integrated Nvidia PhysX models and ABB RobotStudio to simulate realistic mathematical equations, positions, and liaisons for manipulators and lubricating robots.</li>
+        <li>77% 3D model optimization: Reduced triangles and vertex count by 77% using Pixyz.</li>
+        <li>Multiplied frame rate by 13.5 in worst-case scenarios, successfully preventing motion sickness in VR.</li>
       </ul>
     `
   },
   {
     id: "cnc-jig-design",
-    title: "Custom CNC Jig Design",
-    category: "Manufacturing",
-    tags: ["SolidWorks", "GD&T", "Steel"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
-    imageAlt: "Detailed mechanical Universal modular steel fixture clamped assembly schematic in high resolution",
-    shortDescription: "Iterative design of universal modular fixtures to reduce setup time by 45% in batch production.",
+    title: "Washington DC Bus Reliability Dashboard",
+    category: "Dashboard",
+    tags: ["Dashboard", "API", "Monitoring", "Data Visualization"],
+    image: "assets/images/C53_Dashboard.png",
+    imageAlt: "Washington DC Bus Reliability Dashboard",
+    shortDescription: "Using WMATA Public API, I track automatically the headway of C53 buses at the stop that interest me the most, and I display it in a simple dashboard to monitor bus reliability.",
     featured: false,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
-      <p class="text-on-surface-variant font-body-md">Faced with extensive calibration downtime during changeovers in a multi-product job shop, I designed a set of universal, modular CNC manufacturing jigs. These allow precise part lockups using standard toggle clamps and interchangeable locating pins.</p>
+      <p class="text-on-surface-variant font-body-md">Always waiting for the Bus C53, how reliable is it ? let's find out !</p>
+      <a href="https://datastudio.google.com/reporting/fd856d2e-6a10-4764-85ac-2c144ad51690" class="text-primary hover:underline">Click here to check it out.</a>
       
       <h3 class="text-on-surface font-display text-body-lg font-bold mt-6">Key Accomplishments & Results</h3>
       <ul class="list-disc pl-5 mt-2 space-y-2 text-on-surface-variant font-body-md text-sm">
-        <li>Conducted formal stress & tolerance analysis (Finite Element Analysis) inside SolidWorks to guarantee structural stiffness under high 3-axis load milling.</li>
-        <li>Applied strict Geometric Dimensioning and Tolerancing (GD&T) principles, achieving repeatable locates within ±0.015mm.</li>
-        <li>Redesigned part clamping orientations to prevent operator errors (poke-yoke/mistake-proofing).</li>
-        <li>Slashed milling fixture recalibration setup times from 34 minutes down to 8.5 minutes (a 75% setup speed improvement).</li>
+        <li>Played around with the API and google data studio, using research paper to determine which quality metric we should use.</li>
+        <li>Turns out performance is dropping during peak commute hours.</li>
+        <li>The bunching (bus next to one another) is very frequent.</li>
+        <li>Average headway is slightly below 12 minutes during the day which is on target, congrats WMATA.</li>
       </ul>
     `
   },
   {
     id: "lora-mesh-network",
-    title: "LoRa Mesh Network",
+    title: "TBD",
     category: "Personal-Arduino",
-    tags: ["ESP32", "C++", "RadioLib", "Arduino"],
+    tags: ["TBD", "TBD", "TBD", "TBD"],
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600",
     imageAlt: "LoRaWAN nodes connected in mesh network topology on electrical table workstation with instruments",
-    shortDescription: "Developing a low-power, long-range communication protocol for remote environmental monitoring.",
+    shortDescription: "TBD",
     featured: false,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
@@ -107,24 +109,24 @@ window.projectsData = [
     `
   },
   {
-    id: "lean-5s-implementation",
-    title: "Lean 5S Implementation",
+    id: "LSS-Black-Belt-Project",
+    title: "Lean Six Sigma Black Belt project",
     category: "Professional-Manufacturing",
-    tags: ["Lean Six Sigma", "Visio", "ERP", "Manufacturing"],
+  tags: ["TBD", "TBD", "TBD", "TBD"],
     image: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?auto=format&fit=crop&q=80&w=600",
     imageAlt: "Clean optimized floor layout mapped on blueprint for ergonomic production flow according to Lean 5S principles",
-    shortDescription: "Leading a facility-wide 5S overhaul that reduced workplace waste by 15% and improved safety scores.",
+    shortDescription: "TBD",
     featured: false,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
-      <p class="text-on-surface-variant font-body-md">To combat layout clutter and long walk-times in a mechanical assembly facility, I planned and executed a comprehensive 5S system (Sort, Set in order, Shine, Standardize, Sustain).</p>
+      <p class="text-on-surface-variant font-body-md">Got to be trained by ASQ PPast president in Lean Six Sigma methodologies, at a Black Belt Level !</p>
       
       <h3 class="text-on-surface font-display text-body-lg font-bold mt-6">Key Accomplishments & Results</h3>
       <ul class="list-disc pl-5 mt-2 space-y-2 text-on-surface-variant font-body-md text-sm">
-        <li>Mapped step-by-step workflow spaghetti diagrams using Visio to visualize and cut physical walking wastes (muda).</li>
-        <li>Organized focus workshops with operators to trace, color-code, and label workbenches for specialized hand tools.</li>
-        <li>Established formal, standardized cleaning checklists integrated directly into our digital ERP shifts scheduled dashboard.</li>
-        <li>Measured a 15% improvement in overall order-prep dispatch cycles and achieved 100% safety audit compliance scores.</li>
+        <li>TBD.</li>
+        <li>TBD.</li>
+        <li>TBD.</li>
+        <li>Have my black belt :).</li>
       </ul>
     `
   }
