@@ -20,7 +20,7 @@ window.projectsData = [
   },
   {
     id: "anti-sway-system",
-    title: "Modelisation of anti-sway system in gantry cranes",
+    title: "Modeling of anti-sway system in gantry cranes",
     category: "Personal",
     tags: ["C++","PID Control", "Arduino", "I2C", "ESP32"],
     image: "assets/images/Anti-Sway_System.png",
@@ -46,8 +46,8 @@ window.projectsData = [
     category: "Professional",
     tags: ["Digital Twin", "C#","Vertex optimization","VR"],
     image: "assets/images/VR_Sim.png",
-    imageAlt: "Digital Twin of 20.000 Tons aluminum stamping process for Airbus A320 landing gear",
-    shortDescription: "3D Simulation of 20.000 Tons aluminum stamping process for Airbus A320 landing gear",
+    imageAlt: "Digital Twin of 20,000 Tons aluminum stamping process for Airbus A320 landing gear",
+    shortDescription: "3D Simulation of 20,000 Tons aluminum stamping process for Airbus A320 landing gear",
     featured: true,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
@@ -70,7 +70,7 @@ window.projectsData = [
     tags: ["Dashboard", "API", "Monitoring", "Data Visualization"],
     image: "assets/images/C53_Dashboard.png",
     imageAlt: "Washington DC Bus Reliability Dashboard",
-    shortDescription: "Using WMATA Public API, I track automatically the headway of C53 buses at the stop that interest me the most, and I display it in a simple dashboard to monitor bus reliability.",
+    shortDescription: "Using the WMATA Public API, I track automatically the headway of C53 buses at the stop that interests me the most, and I display it in a simple dashboard to monitor bus reliability.",
     featured: false,
     longDescription: `
       <h3 class="text-on-surface font-display text-body-lg font-bold">Project Overview</h3>
